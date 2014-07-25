@@ -1,0 +1,204 @@
+\documentclass[article,openany]{memoir}
+
+% Codificação da entrada e da saída ==================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Idioma =============================================================
+\usepackage[brazil]{babel}
+
+% Hiperlinks =========================================================
+\usepackage{url}
+
+% Tipografia =========================================================
+% (Podem ser removidos sem problema.)
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Autor e título =====================================================
+\title{Bib\TeX: tipos de entradas e campos}
+\author{Tássio Naia dos Santos}
+
+% Abreviações ========================================================
+\newcommand{\obrigatorios}{%
+   \par Obrigatório\dotfill\ignorespaces}
+
+\newcommand{\opcionais}{
+   \par Opcional\dotfill\ignorespaces}
+
+
+% Deixando a coluna de texto um pouco mais gorda =====================
+\settypeblocksize{23cm}{13cm}{*}
+\setulmargins{*}{*}{1}
+\setlrmargins{*}{*}{1}
+\checkandfixthelayout
+
+\begin{document} % ===================================================
+
+
+%\maketitle
+
+\noindent{\LARGE Matemática, ao \(\infty\), e além!}\hfill 03 de julho de 2014
+
+\medskip
+
+\noindent Tássio Naia dos Santos
+
+\medskip
+
+\noindent 25/07/2014: correções gramaticais (Shayenne Moura).
+
+\bigskip
+
+\begin{abstract}
+Apresentamos algumas construções matemáticas comuns: sobrescrito,
+subscrito, fórmulas na linha e em destaque, letras gregas, subscrito
+em limites e somatórios, integral. 
+
+Ficam faltando: Vetores, acentos, equações multilinha, cases,
+matrizes, ambientes para teorema e companhia.
+\end{abstract}
+
+\chapter{Últimas alterações}
+\chapter{Modos de escrita matemática}
+
+Para escrever uma expressão \emph{em linha} no modo matemático basta
+escrevê-la entre ``\verb/\(/`` e~``\verb/\)/''. Por exemplo,
+``\verb/\(x + 3y = \infty\)/'' produz~``\(x + 3y = \infty\)''. Os operadores para
+demarcar uma expressão matemática em destaque são~``\verb/\[/''
+e~``\verb/\]/''. Exemplo: ``\verb/\[a + b + c + \cdots = 20\]/'' gera
+
+\[a+b+c+\cdots = 20\]
+
+Note que os espaços são ignorados : ``\verb/\(a   b c\)/''
+resulta em~\(a   b c\).
+
+Reticências. Há mais de um modo de indicar omissão de pedaços de uma
+expressão matemática. Temos a disposição vários tipos de reticências:
+\begin{itemize}
+\item ``\verb/\(a + b + \cdots + z\)/'' produz \(a+b+\cdots+z\), 
+\item ``\verb/\(\langle a,b,c,\ldots,z \rangle\)/'' produz~\(\langle
+  a,b,c,\ldots,z\rangle\).\footnote{Um modo de ler
+    \cs{langle}-\cs{rangle} é: ângulo esquerdo (\emph{left angle}), e
+    ângulo direito \emph{right angle}, respectivamente.}
+\end{itemize}
+
+\chapter{Subscrito e sobrescrito}
+
+Usamos o operador~``\verb/^/'' (acento circunflexo\footnote{Geralmente
+  é possível obter esse caractere pressionando a tecla com o caractere
+  circunflexo e então pressionando a barra de espaço.}) para colocar o
+elemento seguinte em sobrescrito: ``\verb/\(a^b+c\)/'' produz~\(a^b +
+c\). O operador para subscrito é o underline\footnote{O underline é
+  também chamado subtraço, underscore ou ou traço inferior.}):
+``\verb/a_b + c/'' produz~\(a_b + c\).
+
+Tente escrever:
+\begin{itemize}
+\item \(a_1 + a_2 + \cdots + a_n = 30\)
+\item \(a^{b + c + d + \cdots} = 10^{200}\)
+\end{itemize}
+
+\chapter{Agrupamentos}
+
+Assim como agrupamos palavras quando usamos comandos como \cs{emph},
+podemos agrupar expressões. Veja a diferença entre~\(a^{b + c}\)
+e~\(a^b + c\). Como você faria para obter cada um desses
+efeitos? (Resposta no rodapé.\footnote{Resposta (não espie antes de tentar!) a resposta
+  é~\texttt{\char`\\(a\char`\^\char`{ b + c\char`}\char`\\)}
+e~\texttt{\char`\\(a\char`\^b + c\char`\\)}})
+
+\chapter{Frações e binomial}
+
+Podemos indicar uma fração usando a barra: ``\verb-\(a/b\)-'' produz
+``\(a/b\)''. Outro modo é usando o comando \cs{frac}. Esse comando
+recebe dois argumentos: o primeiro é o numerador da fração, e o
+segundo é o denominador. Por exemplo:~``\verb/\(\frac{a}{b}\)/''
+produz~\(\frac{a}{b}\), e em modo matemático de destaque obtemos
+\[
+\frac{a}{b}
+\]
+
+Para escrever um binomial, usamos um comando um pouco diferente,
+\cs{choose}. Ele age \emph{dentro} de um grupo:
+``\verb/\(a + { n \choose k } + b\)/'' produz \(a + { n \choose k } +
+b\). (Lembramos que, em geral, grupos são partes do texto delimitadas
+por chaves.)
+
+\chapter{Alguns símbolos}
+
+Não há limite para a quantidade de símbolos usados em textos matemáticos.
+Para descobrir como produzir um símbolo: você pode consultar os seguintes textos, disponíveis gratuitamente online.\footnote{Se está em um computador com \LaTeX\ instalado, pode acessar esses documentos usando os comandos ``\texttt{texdoc lshort}'' e~``\texttt{texdoc comprehensive}''.}
+\begin{itemize}
+\item Uma não tão curta introdução a \LaTeX
+\item The Comprehensiive \LaTeX\ symbol list (A lista abrangente de símbolos do \LaTeX)
+\end{itemize}
+
+\section{Letras gregas}
+
+Letras gregas (\(\alpha,\beta,\gamma,\delta,\Delta,\lambda,\ldots\),
+veja tabela~\ref{tab:greek}).
+
+\input{letras-gregas}
+
+\section{Operadores ``relacionais''}
+
+\begin{tabular}{llllllll}
+$=$ & \verb/=/ &
+$\neq$ & \cs{neq} &
+$<$ & \verb/</ &
+$>$ & \verb/>/ \\
+$\leq$ & \cs{leq} &
+$\geq$ & \cs{geq} &
+$\in$ & \cs{in} &
+$\notin$ & \cs{notin} \\
+$\subset$ & \cs{subset} &
+$\supset$ & \cs{supset} &
+$\subseteq$ & \cs{subseteq} &
+$\supseteq$ & \cs{supseteq}
+\end{tabular}
+
+\section{Soma, limite, integral}
+
+Os símbolos \cs{sum} (somatório), \cs{lim} (limite) e \cs{int}
+(integral) são em geral grandes, e têm um comportamento diferente
+quando usamos subscrito e sobrescrito.
+
+\begin{itemize}
+\item ``\verb/\(\sum_i a_i\)/'' produz \(\sum_i a_i\)
+\item ``\verb/\(\sum_{j = 0} ^ n b_j\)/'' produz \(\sum_{j = 0} ^ n b_j\)
+\item ``\verb/\(\lim_{x \to c} f(x) = f(c) \pm K\)/'' produz \(\lim_{x \to c} f(x) = f(c) \pm K\)
+\item ``\verb/\(\int_a ^ b x dx\)/'' produz \(\int_a ^ b x dx\)
+\end{itemize}
+
+\section{Operadores}
+
+\begin{tabular}{llllll}
+\(\cdot\) & \cs{cdot} &
+\(\times\) & \cs{times} &
+\(\circ\) & \cs{circ} \\
+\(\land\) & \cs{land} &
+\(\lor\) & \cs{lor} &
+\(\lnot\) & \cs{lnot} \\
+\(\pm\) & \cs{pm} &
+\(\mp\) & \cs{mp} &
+\end{tabular}
+
+\chapter{Exercícios}
+
+Experimente produzir as seguintes expressões matemáticas, ou, melhor
+ainda, encontre expressões matemáticas reais desse tipo para
+experimentar! Se necessário, consulte o texto ``lshort'': Uma não tão
+curta introdução ao \LaTeX, disponível gratuitamente, e fácil de
+encontrar na internet.
+\begin{enumerate}
+\item \(\displaystyle a + {3x \choose x} = \beta^2\)
+\item \(\displaystyle E=mc^2\)
+\item \(\displaystyle \sum_{i=0}^\infty 0 = 0\)
+\item \(\displaystyle \lim_{x\to \infty} \frac{1}{x} \leq  0 + \varepsilon \)
+\item \(\displaystyle \sin^2 x + \cos^2 x = 1\)
+\item \(\displaystyle \Delta + \frac{\partial f}{\partial x} \geq  h(y)\)
+\item \(\displaystyle a \in A \subset B\)
+\end{enumerate}
+
+\end{document}

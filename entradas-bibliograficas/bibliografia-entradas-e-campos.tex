@@ -1,0 +1,473 @@
+\documentclass[article,openany]{memoir}
+
+% Codificação da entrada e da saída ==================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Idioma =============================================================
+\usepackage[brazil]{babel}
+
+% Hiperlinks =========================================================
+\usepackage{url}
+
+% Tipografia =========================================================
+% (Podem ser removidos sem problema.)
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Autor e título =====================================================
+\title{Bib\TeX: tipos de entradas e campos}
+\author{Tássio Naia dos Santos}
+
+% Abreviações ========================================================
+\newcommand{\obrigatorios}{%
+   \par Obrigatório\dotfill\ignorespaces}
+
+\newcommand{\opcionais}{
+   \par Opcional\dotfill\ignorespaces}
+
+
+% Deixando a coluna de texto um pouco mais gorda =====================
+\settypeblocksize{23cm}{13cm}{*}
+\setulmargins{*}{*}{1}
+\setlrmargins{*}{*}{1}
+\checkandfixthelayout
+
+\begin{document} % ===================================================
+
+
+%\maketitle
+
+\noindent{\LARGE Bib\TeX: tipos de entradas e campos}\hfill 03 de junho de 2014
+
+\medskip
+
+\noindent Tássio Naia dos Santos
+
+\medskip
+
+\noindent 25/07/2014: correções gramaticais (Shayenne Moura).
+
+\bigskip
+
+\begin{abstract}
+Apresentamos os tipos de entradas bibliográficas mais comuns
+que são compreendidos pelo Bib\TeX\ (livro, artigo, relatório
+técnico). Também apresentamos os campos obrigatórios e facultativos de
+cada tipo de entrada.
+\end{abstract}
+
+
+\chapter*{Agradecimentos \& crédito}
+
+Agradecemos a Norman Walsh\footnote{\url{http://nwalsh.com/tex/}} e a
+Juan Antonio Navarro
+Pérez\footnote{\url{http://www.navarroj.com/latex/}} de onde obtivemos
+parte deste material. A tradução e os erros são de responsabilidade
+de~Tássio Naia dos~Santos.
+
+\chapter{Introdução e nomes dos bois}
+
+Chamamos de \emph{entrada bibliográfica} o conjunto de informações
+sobre alguma fonte ou referência bibliográfica. Um~\emph{campo} de uma
+referência é uma ``unidade de informação'' sobre a entrada: por
+exemplo, o nome de seu autor ou a data da sua~publicação.
+
+As entradas bibligráficas são armazenadas em um ou mais arquivos
+bibliográficos (geralmente de extensão~``\texttt{.bib}''). As
+informações de uma mesma entrada são agrupadas; marcamos o tipo da entrada
+(livro, artigo, tese de doutorado, etc.) e anotamos informações sobre
+ela. O tipo de entrada e as informações são usadas pelo
+Bib\TeX\ para formatar corretamente a referência.
+
+Um exemplo: Uma referência a um artigo (article), entitulado ``Pé de
+Laranja Lima'' (title), escrito por José Pereira (author) em 1930
+(year) e publicado pela editora (publisher) Patatas seria anotado da
+seguinte forma:
+
+\begin{verbatim}
+@ARTICLE{jose,
+     AUTHOR = {Jos\'e Pereira},
+      TITLE = {Pé de Laranja Lima},
+  PUBLISHER = {Patatas},
+       YEAR = {1930}
+}
+\end{verbatim}
+
+Onde ``\verb/jose/'' é um rótulo, um codinome ``arbitrário'', que
+podemos escolher para usar em nossos textos sempre que citarmos esta
+entrada bibliográfica (comando ``\verb/\cite{jose}/'').
+
+Na verdade, os rótulos não podem ser qualquer coisa. Eles \emph{não
+podem conter} acentos, cedilha ou vírgula. Você estará em águas
+seguras ao usar os caracteres abaixo para rótulos.
+
+\begin{verbatim}
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+0123456789-_+=:?!*
+\end{verbatim}
+
+\chapter{Campos}
+
+As informações que identificam uma referência variam de acordo com o
+tipo de entrada bibliográfica. Sendo assim, é natural usar campos
+distintos na bibliografia; uma referência a um periódico pode incluir
+o volume e o número da edição, mas isso não faz muito sentido para
+um~livro. Os~campos (informações) podem ser de três tipos:
+
+
+\begin{description}
+\item[Obrigatório]
+a omissão deste campo (por exemplo, um livro sem informação sobre
+a~editora) desorienta o programa Bib\TeX; produzirá uma mensagem de
+erro e pode resultar em uma bibliografia mal-formatada. Se a
+informação requerida não for relevante para a entrada que você está
+editando, é provável que você esteja usando um tipo de entrada
+bibliográfica inadequado (por exemplo, está usando tipo de entrada
+artigo para uma~tese).
+
+
+\item[Opcional]
+a informação do campo será usada se presente, mas pode ser omitida sem
+causar problemas de formatação. Uma referência deve conter qualquer
+informação disponível que possa ajudar o leitor, então, sempre que
+possível, inclua os campos opcionais (aplicáveis) à entrada
+bibliográfica.
+
+
+\item[Ignorado] o campo é ignorado. Por padrão, o Bib\TeX\ ignora qualquer
+campo que não seja obrigatório ou opcional, de modo que você pode
+incluir quaisquer campos que quiser em uma entrada bibliográfica. É
+uma boa ideia colocar toda informação relevante sobre uma referência
+na sua entrada bibliográfica. Por exemplo, se você quiser manter o
+resumo (abstract) de um artigo em um arquivo no computador, coloque-o
+no campo abstract de sua entrada bibliográfica. O banco de referências
+bibliográficas é provavelmente um bom lugar para manter o resumo, e
+alguns estilos de bibiografia permitem usar essa informação, digamos,
+para compor uma bibliografia anotada.
+\end{description}
+
+\section{Lista dos campos mais comuns}
+
+\begin{description}
+\item[Address]
+
+Endereço da editora. Para grandes editoras, basta fornecer a
+cidade. Para pequenas editoras, você pode ajudar o leitor fornecendo o
+endereço completo.
+
+\item[Author]
+
+Nome(s) do(s) autor(es), separados por ``\verb/and/''. 
+
+Exemplo: ``\verb/Jorge Amado and S\'ergio Formosa/''. 
+
+Você também pode escrever os nomes no formato sobrenome-vírgula-nome.
+
+Exemplo: ``\verb/Amado, Jorge and Formosa, S\'ergio/''.
+
+\item[Booktitle]
+
+Título do livro citado.
+
+\item[Chapter]
+
+Número do capítulo.
+
+\item[Edition]
+
+A edição de um livro. Por exemplo, ``\verb/segunda/''.
+
+\item[Editor]
+
+
+Nome(s) do(s) editor(es). Se existe também um campo ``author'', então
+o campo ``editor'' fornece o editor do livro ou coleção em que a
+referência aparece.
+
+\item[Howpublished]
+
+Como foi publicado. Por exemplo, notas de aula.
+
+\item[Institution]
+
+A instituição que publicou o trabalho.
+
+\item[Journal]
+
+Nome do journal (periódico).
+
+\item[Key]
+
+Usado para controlar a ordem alfabética e para criar um rótulo quando
+a entrada não possui campos ``author'' e ``editor''. Este campo não
+deve ser confundido com o rótulo (que aparece no início da entrada): o
+rótulo é usado para referência quando uma citação é feita no documento
+(usando o comando cite).
+
+\item[Month]
+
+O mês em que o trabalho foi publicado ou, caso não tenha sido
+publicado, a data em que foi escrito.
+
+\item[Note]
+
+Qualquer informação adicional que possa ajudar o leitor.
+
+\item[Number]
+
+O número do journal (periódico), revista, ou relatório técnico. Uma
+edição de um journal (periódico) ou revista é geralmente identificada
+pelo seu volume e número; a organização que produz um relatório
+técnico geralmente lhe atribui um número.
+
+\item[Organization]
+
+A organização que promove a conferência.
+
+\item[Pages]
+
+Um número de página ou intervalo de páginas como~``\verb/42--111/'';
+você pode também ter vários intervalos, separados por
+vírgulas~``\verb/7,41,73--97/''.
+
+\item[Publisher]
+
+Nome da editora.
+
+\item[School]
+
+O nome da escola onde a tese foi escrita.
+
+\item[Series]
+
+O nome de uma série ou conjunto de livros. Quando referenciar um livro
+inteiro, o campo ``title'' fornece o seu título e o campo opcional
+``series'' fornece o nome da série em que o livro foi publicado.
+
+\item[Title]
+
+O título do trabalho.
+
+\item[Type]
+
+O tipo de relatório técnico. Por exemplo, ``Relatório de pesquisa''.
+
+\item[Volume]
+
+O volume do journal (periódico) ou tomo do livro.
+
+\item[Year]
+
+O ano da publicação ou, para um trabalho que não foi publicado, o ano
+em que foi escrito. O texto deste campo deve conter apenas dígitos.
+\end{description}
+
+\chapter{Entradas}
+%Entry types
+
+Quando escrevemos uma entrada de uma referência, a primeira coisa que
+precisamos decidir é qual tipo de entrada ela será. Nenhum sistema de
+classificação é completo, mas o Bib\TeX\ possui um conjunto de~tipos
+de~entradas razoavelmente abrangente.
+
+% When entering a reference in the bibliography database, the first
+% thing to decide is what type of entry it is. No fixed classification
+% scheme can be complete, but BibTeX provides enough entry types to
+% handle almost any reference reasonably well.
+
+
+O bibtex ignora se o tipo da entrada é escrito em minúsculas ou
+maiúsculas (Por exemplo: \verb/article/, \verb/ARTICLE/
+e \verb/Article/ são iguais; assim como \verb/author/, \verb/AUTHOR/
+e~\verb/Author/).
+
+A seguir está uma entrada bibliográfica correspondente a um livro. Os
+campos obrigatórios estão todos preenchidos, e dois campos (quais?)
+ignorados foram colocados também (uma anotação pessoal).
+
+\begin{verbatim}
+@BOOK{snowden,
+    AUTHOR = {Edward Snowden},
+     TITLE = {Vazamentos},
+ PUBLISHER = {Editora Encanamentos},
+      YEAR = {2013},
+      NOTE = {Livro cifrado, evite divulgar a chave privada.},
+   ABSTRACT = {Privacidade é um direito, que precisamos defender.
+              Não dá mais para acreditar na boa-fé dos carteiros
+              que carregam nossas mensagens na internet. Este é
+              um livro sobre o que você e eu podemos fazer a 
+              respeito.}
+}
+
+\end{verbatim}
+
+\section{Tipos de entradas}
+
+\begin{description}
+\item[Article] 
+Artigo de um periódico (\emph{journal, magazine}).
+
+  \obrigatorios author, title, journal, year.
+
+  \opcionais volume, number, pages, month, note, key.
+
+\item[Book]
+Livro com editora explícita, ou cuja impressão foi patrocinada por uma
+organização (instituto, universidade).
+
+  \obrigatorios author or editor, title, publisher, year.
+
+  \opcionais volume, series, address, edition, month, note, key.
+
+\item[Book]
+Livro com editora explícita, ou cuja impressão foi patrocinada por uma
+organização (instituto, universidade).
+
+  \obrigatorios author or editor, title, publisher, year.
+
+  \opcionais volume, series, address, edition, month, note, key.
+
+\item[Booklet]
+Trabalho que foi impresso e encadernado, mas que não passou por uma
+editora ou que não possui uma instiuição patrocinadora.
+
+  \obrigatorios title.
+
+  \opcionais author, howpublished, address, month, year, note, key.
+%----------------------------------------------------------------------
+
+\item[Conference]
+Artigo nos anais ou atas de uma conferência. Este tipo de entrada é
+idêntico a ``inproceedings'', e está aqui por uma questão de
+compatibilidade com outros sitemas de formatação de texto.
+
+  \obrigatorios author, title, booktitle, year.
+
+  \opcionais editor, pages, organization, publisher, address, month, note, key.
+
+%----------------------------------------------------------------------
+
+\item[Inbook]
+Parte de um livro; pode ser um capítulo ou um intervalo de páginas.
+
+  \obrigatorios author or editor, title, chapter and/or pages, publisher, year.
+
+  \opcionais volume, series, address, edition, month, note, key.
+
+%----------------------------------------------------------------------
+
+\item[Incollection]
+Uma parte de um livro que tem um título próprio.
+
+
+  \obrigatorios author, title, booktitle, year.
+
+  \opcionais editor, pages, organization, publisher, address, month, note, key.
+
+%----------------------------------------------------------------------
+
+\item[Inproceedings]
+Artigo nas atas ou anais de uma conferência.
+
+  \obrigatorios author, title, booktitle, year.
+
+  \opcionais editor, pages, organization, publisher, address, month, note, key.
+
+%----------------------------------------------------------------------
+
+\item[Manual]
+Documentação técnica.
+
+  \obrigatorios title.
+
+  \opcionais author, organization, address, edition, month, year, note, key.
+
+%----------------------------------------------------------------------
+
+\item[Mastersthesis]
+Dissertação ou tese de mestrado.
+
+  \obrigatorios author, title, school, year.
+
+  \opcionais address, month, note, key.
+
+%----------------------------------------------------------------------
+
+\item[Misc]
+Use este tipo quando nada mais parecer apropriado.
+
+  \obrigatorios 
+
+  \opcionais author, title, howpublished, month, year, note, key.
+
+%----------------------------------------------------------------------
+
+\item[Phdthesis]
+Tese de doutorado.
+
+  \obrigatorios author, title, school, year.
+
+  \opcionais address, month, note, key.
+
+%----------------------------------------------------------------------
+
+\item[Proceedings]
+Atas ou anais (proceedings) de uma conferência.
+
+  \obrigatorios title, year.
+
+  \opcionais editor, publisher, organization, address, month, note, key.
+
+%----------------------------------------------------------------------
+
+\item[Techreport]
+Relatório publicado por uma escola ou outra instituição, são geralmnte
+numerados e fazem parte de uma série.
+
+  \obrigatorios author, title, institution, year.
+
+  \opcionais type, number, address, month, note, key.
+
+%----------------------------------------------------------------------
+
+\item[Unpublished]
+Documento com autor e título, mas que não foi publicado formalmente.
+
+  \obrigatorios author, title, note.
+
+  \opcionais month, year, key.
+
+%----------------------------------------------------------------------
+
+\end{description}
+
+\end{document}
+
+% BibTeX ignores the case of letters in the entry type. 
+
+%% R means the field is required.
+%% O means it is optional.
+%% A means the fields are optional, but both can't be given in the same entry.
+%% E means either one or the other field must be given.
+%% B means one or the other or both must be given.
+
+%%  \begin{tabular}{cccccccccccccccccccccc}
+%%  author & title & editor & booktitle & journal & volume & number & series & type & institution & school & chapter & pages & publisher & howpublished & address & edition & month & year & organization & note & key
+%%  article & R & R & . & . & R & O & O & . & . & . & . & . & O & . & . & . & . & O & R & . & O & O
+%%  book & E & R & E & . & . & A & A & O & . & . & . & . & . & R & . & O & O & O & R & . & O & O
+%%  booklet & O & R & . & . & . & . & . & . & . & . & . & . & . & . & O & O & . & O & O & . & O & O
+%%  conference & R & R & O & R & . & A & A & O & . & . & . & . & O & O & . & O & . & O & R & O & O & O
+%%  inbook & E & R & E & . & . & A & A & O & O & . & . & B & B & R & . & O & O & O & R & . & O & O
+%%  incollection & R & R & O & R & . & A & A & O & O & . & . & O & O & O & . & O & O & O & R & . & O & O
+%%  inproceedings & R & R & O & R & . & A & A & O & . & . & . & . & O & O & . & O & . & O & R & O & O & O
+%%  manual & O & R & . & . & . & . & . & . & . & . & . & . & . & . & . & O & O & O & O & O & O & O
+%%  mastersthesis & R & R & . & . & . & . & . & . & O & . & R & . & . & . & . & O & . & O & R & . & O & O
+%%  misc & O & O & . & . & . & . & . & . & . & . & . & . & . & . & O & . & . & O & O & . & O & O
+%%  phdthesis & R & R & . & . & . & . & . & . & O & . & R & . & . & . & . & O & . & O & R & . & O & O
+%%  proceedings & . & R & O & . & . & A & A & . & . & . & . & . & . & O & . & O & . & O & R & O & O & O
+%%  techreport & R & R & . & . & . & . & O & . & O & R & . & . & . & . & . & O & . & O & R & . & O & O
+%%  unpublished & R & R & . & . & . & . & . & . & . & . & . & . & . & . & . & . & . & O & O & . & R & O
+%%  \end{tabular}
+%----------------------------------------------------------------------
