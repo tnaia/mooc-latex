@@ -1,0 +1,290 @@
+\documentclass[article,openany]{memoir}
+
+% Codificação da entrada e da saída ==================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Idioma =============================================================
+\usepackage[brazil]{babel}
+
+% Hiperlinks =========================================================
+\usepackage{url}
+
+% Tipografia =========================================================
+% (Podem ser removidos sem problema.)
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Autor e título =====================================================
+\title{Bib\TeX: nomes ácèñ\d{t}ü\v{a}çã\b{o}}
+\author{Tássio Naia dos Santos}
+
+% Abreviações ========================================================
+\newcommand{\obrigatorios}{%
+   \par Obrigatório\dotfill\ignorespaces}
+
+\newcommand{\opcionais}{
+   \par Opcional\dotfill\ignorespaces}
+
+\newcommand*{\extensao}[1]{\texttt{#1}}
+
+\newenvironment{exemplo}{\begin{center}}{\end{center}}
+% Deixando a coluna de texto um pouco mais gorda =====================
+\settypeblocksize{23cm}{13cm}{*}
+\setulmargins{*}{*}{1}
+\setlrmargins{*}{*}{1}
+\checkandfixthelayout
+
+\begin{document} % ===================================================
+
+
+%\maketitle
+
+\noindent{\LARGE Bib\TeX: nomes e ácèñ\d{t}ü\v{a}çã\b{o}}\hfill 27 de julho de 2014
+
+\medskip
+
+\noindent Tássio Naia dos Santos
+
+%\medskip
+
+%\noindent 25/07/2014: correções gramaticais (Shayenne Luz Moura).
+
+\bigskip
+
+\begin{abstract}
+Apresentamos as partes de um nome --- como percebidas e tratadas pelo
+Bib\TeX. Também descrevemos um modo para obter a ordem alfabética
+adequada para entradas que contém caracteres diferentes das 26 letra
+do alfabeto inglês.
+\end{abstract}
+
+
+\chapter*{Agradecimentos \& crédito}
+
+Agradecemos a Norman Walsh\footnote{\url{http://nwalsh.com/tex/}}, de
+onde obtivemos parte deste material. A tradução e os erros são de
+responsabilidade de~Tássio Naia dos~Santos.
+
+
+
+\chapter{Acentuação}
+
+Existem diversas maneiras de colocar acentos e outros sinais
+diacríticos sobre letras no \LaTeX. Com a popularização do Unicode,
+mais e mais pessoas são capazes de escrever textos no computador
+usando um teclado nativo para seu idioma. Para a língua portuguesa,
+isso significa que, usando a combinação adequada de teclas, somos
+capazes de inserir caracteres ``acentuados'', como `í', `c', `ã', `ê',
+etc.
+
+Quando o \TeX\ foi criado, não havia sequer internet. Uma herança
+dessa época é que existem modos de escrever palavras acentuadas usando
+comandos, o que permite obter uma grande gama de letras usando apenas
+um conjunto de caracteres básico e largamente presente nos teclados
+ocidentais, como as letras de `a' a~`z', e sinais
+como~``\verb/`'^~`"/''.
+
+Uma vantagem dos uso de comandos para inserir sinais diacríticos é
+que, ao separar o acento da ``letra'' que ele modifica\footnote{Aqui,
+  quando dizemos ``letra'', estamos falando das letras a, b, c,\ldots,
+  z.}, fica mais simples (para o computador) fazer a ordenação
+alfabética de uma lista de nomes. O computador ignora os acentos, e
+considera apenas a sequência de ``letras'' do nome.
+
+A tabela abaixo exemplifica alguns dos vários sinais que podemos
+escrever com o~\LaTeX.
+\begin{exemplo}
+\begin{tabular}{rcl}
+ \verb/\`{o}/ & \`{o} & acento grave                                   \\
+ \verb/\'{o}/ & \'{o} & acento agudo                                   \\
+ \verb/\^{o}/ & \^{o} & acento circunflexo                             \\
+ \verb/\"{o}/ & \"{o} & trema                                          \\
+ \verb/\H{o}/ & \H{o} & trema Húngaro longo (duplo agudo)              \\
+ \verb/\~{o}/ & \~{o} & acento til                                     \\
+ \verb/\c{c}/ & \c{c} & cedilha                                        \\
+ \verb/\={o}/ & \={o} & acento mácron (barra sobre a letra)            \\
+ \verb/\b{o}/ & \b{o} & barra sob a letra                              \\
+ \verb/\.{o}/ & \.{o} & ponto sobre a letra                            \\
+ \verb/\d{u}/ & \d{u} & ponto sob a letra                              \\
+ \verb/\r{a}/ & \r{a} & anel (anel sobre a letra)                      \\
+ \verb/\u{o}/ & \u{o} & bráquia (`u' sobre a letra)                    \\
+ \verb/\v{s}/ & \v{s} & caron ou há\v cek (`v' sobre a letra)          \\
+ \verb/\t{oo}/ 
+              & \t{oo}     & `u' invertido sobre duas letras           \\
+\verb/\oe/ e \verb/\OE/ 
+              & \oe\ e \OE & ligadura tipográfia francesa              \\
+\verb/\ae/ e \verb/\AE/
+              & \ae\ e \AE & ligadura tipográfica latina e escandinava \\
+\verb/\aa/ e \verb/\AA/ 
+              & \aa\ e \AA & `a' com anel escandinavo                  \\
+\verb/\o/ e \verb/\o/ 
+              & \o\ e \O   & `o' barrado escandinavo                   \\
+\verb/\l/ e \verb/\L/ 
+              & \l\ e \L   & L-suprimido polonês                       \\
+\verb/\ss/ & \ss           & ``es-zet'' alemão
+\end{tabular}
+\end{exemplo}
+% O trecho abaixo vem de nwalsh.com/tex/texhelp/bibtx-23.html
+% Fiz pequenas alterações, e adicionai exemplos em português.
+
+\chapter{Nomes}
+
+O texto dos campos autor e editor em um arquivo \extensao{.bib}
+representa uma lista de nomes. O estilo da bibliografia determina em
+que formato o nome deve ser impresso: se é o primeiro ou o último nome
+a vir primeiro, se o primeiro aparece por extenso ou abreviado, etc. O
+arquivo de bibliografia simplesmente diz a o Bib\TeX\ qual é o nome.
+
+Você deve escrever o nome completo do autor e deixar o estilo da
+bibliografia decidir o que deve ser abreviado. (Mas o nome completo de
+um autor pode, a princípio, ser ``Donald~E. Knuth'' ou mesmo
+``J.~P.~Morgan''; você deveria escrevê-lo do modo que o autor gostaria
+que ele aparecesse, se isso é conhecido.)  to appear, if that's
+known.)
+
+A maior parte dos nomes pode ser escrita do modo óbvio, com ou sem uma vírgula, como nos exemplos a seguir.
+
+\smallskip
+
+\begin{tabular}{p{5cm}l}
+John Paul Jones  &  Ludwig von Beethoven \\
+Jones, John Paul &  von Beethoven, Ludwig
+\end{tabular}
+
+\smallskip
+
+Algumas pessoas possuem sobrenomes múltiplos --- por exemplo, o
+sobrenome de ``Per Brinch Hansen'' é ``Brinch~Hansen''. Este nome deve
+ser escrito (no arquivo \extensao{.bib} com uma vírgula:
+
+\begin{exemplo}
+Brinch Hansen, Per
+\end{exemplo}
+
+Outro exemplo, para ``Adriano Moreira Passos'':
+
+\begin{exemplo}
+Moreira Passos, Adriano
+\end{exemplo}
+
+Para entender o porquê, é preciso compreender o modo como o
+Bib\TeX\ lida com nomes (no restante desse artigo, ``nome''
+corresponde ao nome de uma pessoa).
+
+Cada nome consiste de quatro partes: Primeiro, von, Último, e~Jr; cada
+parte consiste de uma lista (possivelmente vazia) de pedaços.  Por
+exemplo, a primeira parte de Adriano Moreira~Passos é ``Adriano''; a
+última possui duas partes ``Moreira'' e~``Passos''; e as partes
+``von'' e ``Jr'' estão vazias. Se você tivesse escrito
+
+\begin{exemplo}
+Adriano Moreira Passos
+\end{exemplo}
+
+sem a vírgula, o Bib\TeX teria assumido que ``Brinch'' era uma parte
+do primeiro nome, assim como ``Paulo'' é uma parte do primeiro nome de
+``Jõao~Paulo Prado''.
+
+Aqui está um outro exemplo:
+
+\begin{exemplo}
+Charles Louis Xavier Joseph de la Vallée Poussin
+\end{exemplo}
+
+Este nome possui quatro partes no primeiro nome, duas no von, e duas
+no sobrenome. Aqui o Bib\TeX\ sabe onde cada parte termina e outra
+inicia porque as partes na parte von começam com letras minúsculas.
+
+Se você quiser que o Bib\TeX\ considere algo como uma única parte,
+basta colocar a expressão entre chaves (isto é, entre ``\{''
+e~``\}''). Você deve fazer isso, por exemplo, se uma vírgula é parte
+de um nome:
+
+\begin{exemplo}
+\begin{minipage}{5cm}
+\{Barnes and Noble, Inc.\}
+
+\{Barnes and\} \{Noble, Inc.\}
+
+\{Barnes\} \{and\} \{Noble,\} \{Inc.\}
+\end{minipage}
+\end{exemplo}
+
+As chaves que envolvem a vírgula impedem que ``Inc.'' seja
+interpretado como uma parte do primeiro nome; este nome possui apenas
+uma parte no sobrenome, que
+
+ this name has only a Last part, with either one, two, or four tokens
+ (there must be a space separating the tokens in the second and third
+ forms). Probably the second form is slightly more meaningful, but
+ don't lose sleep over this since only rarely will an institution be
+ an author or editor.
+
+Os dois nomes
+\begin{exemplo}
+von Beethoven, Ludwig\quad\ e\quad \{von Beethoven\}, Ludwig
+\end{exemplo}
+são vistos diferentemente pelo Bib\TeX. No primeiro, ``Beethoven'' é o
+sobrenome e ``von'' é a parte von; no segundo, que neste caso está
+incorreto, o sobrenome apenas uma palavra e não existe a parte von. O
+estilo de bibliografia provavelmente imprimirá ambos da mesma forma,
+mas isso afetará ordem afabética.
+
+Além de ``de la (Valée)'' e ``von~(Beethoven)'', outros exemplos de
+nomes com parte von são ``de~Almeida'' e ``dos~Santos''.
+
+
+``Juniors'' é um caso em particular. A maior parte das pessoas que
+possuem ``Jr.'' em seu nome têm por hábito precedê-lo por uma
+vírgula. Tais nomes devem ser escritos como segue:
+
+\begin{exemplo}
+Ford, Jr., Henry
+\end{exemplo}
+
+Algumas poucas pessoas, contudo, não usam a vírgula. Neste caso você
+pode considerar o ``Jr.'' como parte do sobrenome:
+
+\begin{exemplo}
+\{Steele Jr.\}, Guy L.\quad\ e\quad ``Guy L. \{Steele Jr.\}
+\end{exemplo}
+O Bib\TeX\ não considerará que esse nome possui a parte Jr.
+
+\smallskip
+
+Resumindo, você pode escrever um nome em uma das três formas a seguir:
+\begin{itemize}
+\item Primeiro von Sobrenome
+\item von  Sobrenome, Primeiro
+\item von Sobrenome, Jr, Primeiro
+\end{itemize}
+
+Você pode quase sempre usar a primeira forma; mas é melhor evitá-la se
+existe uma parte Jr, ou se a última parte possui mais do que uma
+palavra e não existe parte von.
+
+Se existem múltiplos autores ou editores, seus nomes devem ser
+separados pela palavra ``and''. O ``and'' deve estar entre espaços, e
+\emph{não} deve estar entre chaves.
+
+\begin{exemplo}
+AUTHOR = ``Ralph Alpher and Bethe, Hans and George Gamow''
+\end{exemplo}
+
+Como o Bib\TeX\ interpreta vírgulas como um separador das partes de um
+nome, e ``and'' como separador de nomes, o exemplo acima indica três
+co-autores. Ralph Alpher, Hans Bethe, e George Gamow. Se a palavra
+``and'' aparece como parte de um nome, ela deve estar entre caves,
+como no exemplo ``Barnes and Noble,~Inc.'' acima. Se você tem nomes
+demais para listar em um campo, ccovê pode terminar a lista com ``and
+others''; a maioria dos estilos de bibliografia trata substitui isso
+por~``et al.''
+
+As regras do Bib\TeX\ são, na verdade, um pouco mais complicadas do
+que indicado aqui, mas esta descrição basta para a maior parte dos
+nomes.
+
+
+
+\end{document}
