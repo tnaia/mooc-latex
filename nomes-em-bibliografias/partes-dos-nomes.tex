@@ -28,6 +28,9 @@
 
 \newcommand*{\extensao}[1]{\texttt{#1}}
 
+\newcommand*{\as}[1]{% <--- aspas simples
+  `\thinspace\texttt{#1}\thinspace'} 
+
 \newenvironment{exemplo}{\begin{center}}{\end{center}}
 % Deixando a coluna de texto um pouco mais gorda =====================
 \settypeblocksize{23cm}{13cm}{*}
@@ -75,15 +78,16 @@ diacríticos sobre letras no \LaTeX. Com a popularização do Unicode,
 mais e mais pessoas são capazes de escrever textos no computador
 usando um teclado nativo para seu idioma. Para a língua portuguesa,
 isso significa que, usando a combinação adequada de teclas, somos
-capazes de inserir caracteres ``acentuados'', como `í', `c', `ã', `ê',
-etc.
+capazes de inserir caracteres ``acentuados'', como \as{í}, \as{c},
+\as{ã}, \as{ê}, etc.
 
 Quando o \TeX\ foi criado, não havia sequer internet. Uma herança
 dessa época é que existem modos de escrever palavras acentuadas usando
 comandos, o que permite obter uma grande gama de letras usando apenas
 um conjunto de caracteres básico e largamente presente nos teclados
-ocidentais, como as letras de `a' a~`z', e sinais
-como~``\verb/`'^~`"/''.
+ocidentais, como as letras de `a' a~`z', e sinais como aspas
+\as{\char`\`} e~\as{\char`\'}, circunflexo~\as{\char`\^},
+til~\as{\char`\~} acento grave~\as{\char`\`} e aspas duplas~\as{\char`\"}.
 
 Uma vantagem dos uso de comandos para inserir sinais diacríticos é
 que, ao separar o acento da ``letra'' que ele modifica\footnote{Aqui,
@@ -91,6 +95,17 @@ que, ao separar o acento da ``letra'' que ele modifica\footnote{Aqui,
   z.}, fica mais simples (para o computador) fazer a ordenação
 alfabética de uma lista de nomes. O computador ignora os acentos, e
 considera apenas a sequência de ``letras'' do nome.
+
+Por exemplo, para escrever a ligadura tipográfica em ``\oe vre'',
+usa-se o comando~\cs{oe}. Note que quando o comando aparece ao fim de
+uma palavra, será necessário, por por vezes, usar a sequência de
+comando barra-espaço \as{\textbackslash\textvisiblespace}. Compare
+\begin{exemplo}
+\begin{tabular}{lll}
+\verb/Arch\ae é uma\ldots/ & resulta em & Arch\ae é uma\ldots \\
+\verb/Arch\ae\ é uma\ldots/ & resulta em & Arch\ae\ é uma\ldots
+\end{tabular}
+\end{exemplo}
 
 A tabela abaixo exemplifica alguns dos vários sinais que podemos
 escrever com o~\LaTeX.
@@ -144,15 +159,13 @@ que ele aparecesse, se isso é conhecido.)  to appear, if that's
 known.)
 
 A maior parte dos nomes pode ser escrita do modo óbvio, com ou sem uma vírgula, como nos exemplos a seguir.
-
-\smallskip
-
+\begin{exemplo}
 \begin{tabular}{p{5cm}l}
 John Paul Jones  &  Ludwig von Beethoven \\
 Jones, John Paul &  von Beethoven, Ludwig
 \end{tabular}
+\end{exemplo}
 
-\smallskip
 
 Algumas pessoas possuem sobrenomes múltiplos --- por exemplo, o
 sobrenome de ``Per Brinch Hansen'' é ``Brinch~Hansen''. Este nome deve
@@ -182,7 +195,7 @@ exemplo, a primeira parte de Adriano Moreira~Passos é ``Adriano''; a
 Adriano Moreira Passos
 \end{exemplo}
 
-sem a vírgula, o Bib\TeX teria assumido que ``Brinch'' era uma parte
+sem a vírgula, o Bib\TeX teria assumido que ``Moreira'' era uma parte
 do primeiro nome, assim como ``Paulo'' é uma parte do primeiro nome de
 ``Jõao~Paulo Prado''.
 
@@ -285,6 +298,19 @@ As regras do Bib\TeX\ são, na verdade, um pouco mais complicadas do
 que indicado aqui, mas esta descrição basta para a maior parte dos
 nomes.
 
+\chapter{Exercícios}
 
+Tente descobrir como escrever os seguintes nomes para que eles sejam
+ordenados de modo correto alfabeticamente.
+\begin{enumerate}
+\item Pál Erd\H os
+\item João Paulo Condé de Oliveira Prado
+\item Jean de La Fontaine
+\item Pedro de Alcântara Francisco António João Carlos Xavier de Paula Miguel Rafael Joaquim José Gonzaga Pascoal Cipriano Serafim de Bragança e Bourbon
+\item Alexandra David-Néel
+\item Elisabeth Marie Monique Suzanne Sophie Delphine Voldrue Tandonnet
+\item L\ae s\o\ von Neumann Jr.
+\item Caius Iulius C\ae sar IV
+\end{enumerate}
 
 \end{document}
