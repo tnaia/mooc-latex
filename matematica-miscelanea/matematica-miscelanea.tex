@@ -1,0 +1,134 @@
+\documentclass[article,openany]{memoir}
+
+% Codificação da entrada e da saída ==================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Idioma =============================================================
+\usepackage[brazil]{babel}
+
+% Hiperlinks =========================================================
+\usepackage{url}
+
+% comando \text para texto em fórmulas ===============================
+\usepackage{amsmath}
+
+% Tipografia =========================================================
+% (Podem ser removidos sem problema.)
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Autor e título =====================================================
+\title{Matemática: miscelânea}
+\author{Tássio Naia dos Santos}
+
+% Abreviações ========================================================
+\newcommand{\obrigatorios}{%
+   \par Obrigatório\dotfill\ignorespaces}
+
+\newcommand{\opcionais}{
+   \par Opcional\dotfill\ignorespaces}
+
+\newcommand*{\extensao}[1]{\texttt{#1}}
+
+\newcommand*{\pacote}[1]{\textsf{#1}}
+
+\newcommand*{\ambiente}[1]{\textsf{#1}}
+
+\newcommand*{\astt}[1]{% <--- aspas simples com texto monoespaçado
+  `\thinspace\texttt{#1}\thinspace'} 
+
+\newcommand*{\as}[1]{% <--- aspas simples com texto normal
+  `\thinspace#1\thinspace'}
+
+\newenvironment{exemplo}{\begin{center}}{\end{center}}
+% Deixando a coluna de texto um pouco mais gorda =====================
+\settypeblocksize{23cm}{13cm}{*}
+\setulmargins{*}{*}{1}
+\setlrmargins{*}{*}{1}
+\checkandfixthelayout
+
+\begin{document} % ===================================================
+
+
+%\maketitle
+
+\noindent{\LARGE Matemática: miscelânea}\hfill 28 de julho de 2014
+
+\medskip
+
+\noindent Tássio Naia dos Santos
+
+% últimas modificações ===============================================
+%\medskip
+%\noindent 25/07/2014: correções gramaticais (Shayenne Luz Moura).
+
+\bigskip
+
+\begin{abstract}
+Algumas construções comuns. Texto em fórmulas, ambiente
+\ambiente{cases}, derivadas, integrais (simples, duplas, em curvas
+fechadas e parciais), entre outros.
+\end{abstract}
+
+\chapter{Texto em fórmulas e ambiente \ambiente{cases}}
+
+O pacote \pacote{amsmath}, da Sociedade Matemática Americana (American
+Mathemaical Society) habilita muitos comandos úteis para escrever
+expressões matemáticas. Entre eles está o comando \cs{text}, que
+permite inserir texto ``normal'' dentro de fórmulas matemáticas. Por exemplo,
+\begin{exemplo}
+ \verb/a_{\text{médio}}/\quad produz\quad \(\displaystyle a_{\text{médio}}\).
+\end{exemplo}
+Outro acréscimo desse pacote é o ambiente \ambiente{cases}, que permite a seguinte construção
+\begin{verbatim}
+\[
+ f(x) = 
+ \begin{cases}
+   2 & \text{se \(x\) é um múltiplo inteiro de \(\pi\)} \\
+   1 & \text{se \(x\) é um número racional}             \\
+   0 & \text{caso contrário}
+ \end{cases}
+\]
+\end{verbatim}
+e que produz
+\[
+f(x) = 
+ \begin{cases}
+   2 & \text{se \(x\) é um múltiplo inteiro de \(\pi\)} \\
+   1 & \text{se \(x\) é um número racional} \\
+   0 & \text{caso contrário}
+ \end{cases}
+\]
+
+%% \chapter{Integrais}
+%% 
+%% No tex.stackexchange parece unanimidade que o jeito certo é:
+%% \begin{verbatim}
+%% \newcommand*\diff{\mathop{}\!\mathrm{d}}
+%% \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
+%% \end{verbatim}
+%% 
+%% Algumas vezes é preciso fazer alguns ajustes finos no modo como certas
+%% expressões são formatadas. Integrais são um exemplo disso. Se
+%% simplesmente escrevemos os símbolos de uma integral, por exemplo
+%% ``\verb/\int_0^\infty x dx/'', obtemos
+%% \[\int_0^\infty x dx.\]
+%% Dois ajustes são geralmente feitos nessa expressão. Primeiro, note que
+%% o ``d'' no diferencial~\(dx\) não é uma variável, isto é, não
+%% representa um número ou parâmetro de uma função. Para ressaltar esse
+%% fato, em geral empregamos outra fonte matemática para essa letra,
+%% escrevendo ``\verb/\mathrm{d}x/'' em vez de ``\verb/dx/''. O resultado é
+%% \[\int_0^\infty x \mathrm{d}x.\]
+%% O outro ajuste que fazemos é no espaçamento. Há espaço \emph{demais}
+%% entre o símbolo~\(\int\) da integral e a expressão integrada
+%% ``\(x\)''. Por outro lado, não existe espaço algum antes do
+%% diferencial ``\(\mathrm{d}x\)''. Resolvemos isso escrevendo, por exemplo
+%% ``\verb/\int^\infty\!\!\! x \,\mathrm{d}x/''.
+%% \[
+%% \int_0^\infty\! x \,\mathrm{d}x.
+%% \]
+
+ 
+
+\end{document}
