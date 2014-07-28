@@ -28,8 +28,11 @@
 
 \newcommand*{\extensao}[1]{\texttt{#1}}
 
-\newcommand*{\as}[1]{% <--- aspas simples
+\newcommand*{\astt}[1]{% <--- aspas simples
   `\thinspace\texttt{#1}\thinspace'} 
+
+\newcommand*{\as}[1]{% <--- aspas simples
+  `\thinspace#1\thinspace'}
 
 \newenvironment{exemplo}{\begin{center}}{\end{center}}
 % Deixando a coluna de texto um pouco mais gorda =====================
@@ -78,16 +81,16 @@ diacríticos sobre letras no \LaTeX. Com a popularização do Unicode,
 mais e mais pessoas são capazes de escrever textos no computador
 usando um teclado nativo para seu idioma. Para a língua portuguesa,
 isso significa que, usando a combinação adequada de teclas, somos
-capazes de inserir caracteres ``acentuados'', como \as{í}, \as{c},
-\as{ã}, \as{ê}, etc.
+capazes de inserir caracteres ``acentuados'', como \astt{í}, \astt{c},
+\astt{ã}, \astt{ê}, etc.
 
 Quando o \TeX\ foi criado, não havia sequer internet. Uma herança
 dessa época é que existem modos de escrever palavras acentuadas usando
 comandos, o que permite obter uma grande gama de letras usando apenas
 um conjunto de caracteres básico e largamente presente nos teclados
 ocidentais, como as letras de `a' a~`z', e sinais como aspas
-\as{\char`\`} e~\as{\char`\'}, circunflexo~\as{\char`\^},
-til~\as{\char`\~} acento grave~\as{\char`\`} e aspas duplas~\as{\char`\"}.
+\astt{\char`\`} e~\astt{\char`\'}, circunflexo~\astt{\char`\^},
+til~\astt{\char`\~} acento grave~\astt{\char`\`} e aspas duplas~\astt{\char`\"}.
 
 Uma vantagem dos uso de comandos para inserir sinais diacríticos é
 que, ao separar o acento da ``letra'' que ele modifica\footnote{Aqui,
@@ -99,7 +102,7 @@ considera apenas a sequência de ``letras'' do nome.
 Por exemplo, para escrever a ligadura tipográfica em ``\oe vre'',
 usa-se o comando~\cs{oe}. Note que quando o comando aparece ao fim de
 uma palavra, será necessário, por por vezes, usar a sequência de
-comando barra-espaço \as{\textbackslash\textvisiblespace}. Compare
+comando barra-espaço \astt{\textbackslash\textvisiblespace}. Compare
 \begin{exemplo}
 \begin{tabular}{lll}
 \verb/Arch\ae é uma\ldots/ & resulta em & Arch\ae é uma\ldots \\
@@ -142,6 +145,10 @@ escrever com o~\LaTeX.
 \end{exemplo}
 % O trecho abaixo vem de nwalsh.com/tex/texhelp/bibtx-23.html
 % Fiz pequenas alterações, e adicionai exemplos em português.
+
+Note que as letras \as{i} e~\as{j} precisam de tratamento especial, já
+que é preciso \emph{remover o pingo} antes de acrescentar o acento:
+`\verb/\^\i/' produz~\as{\^\i}, e~`\verb/\`\j/' produz \as{\`\j'}.
 
 \chapter{Nomes}
 
