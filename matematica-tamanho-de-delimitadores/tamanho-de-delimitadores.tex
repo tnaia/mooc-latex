@@ -1,0 +1,188 @@
+\documentclass[article,openany]{memoir}
+
+% Codificação da entrada e da saída ==================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Idioma =============================================================
+\usepackage[brazil]{babel}
+
+% Hiperlinks =========================================================
+\usepackage{url}
+
+% comando \text para texto em fórmulas ===============================
+\usepackage{amsmath}
+
+% Tipografia =========================================================
+% (Podem ser removidos sem problema.)
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Autor e título =====================================================
+\title{Matemática: o tamanho de delimitadores}
+\author{Tássio Naia dos Santos}
+
+% Abreviações ========================================================
+\newcommand{\obrigatorios}{%
+   \par Obrigatório\dotfill\ignorespaces}
+
+\newcommand{\opcionais}{
+   \par Opcional\dotfill\ignorespaces}
+
+\newcommand*{\extensao}[1]{\texttt{#1}}
+
+\newcommand*{\pacote}[1]{\textsf{#1}}
+
+\newcommand*{\ambiente}[1]{\textsf{#1}}
+
+\newcommand*{\astt}[1]{% <--- aspas simples com texto monoespaçado
+  `\thinspace\texttt{#1}\thinspace'} 
+
+\newcommand*{\as}[1]{% <--- aspas simples com texto normal
+  `\thinspace#1\thinspace'}
+
+\newenvironment{exemplo}{\begin{center}}{\end{center}}
+% Deixando a coluna de texto um pouco mais gorda =====================
+\settypeblocksize{23cm}{13cm}{*}
+\setulmargins{*}{*}{1}
+\setlrmargins{*}{*}{1}
+\checkandfixthelayout
+
+\begin{document} % ===================================================
+
+
+%\maketitle
+
+\noindent{\LARGE Matemática: o tamanho de delimitadores}\hfill 28 de julho de 2014
+
+\medskip
+
+\noindent Tássio Naia dos Santos
+
+% últimas modificações ===============================================
+%\medskip
+%\noindent 25/07/2014: correções gramaticais (Shayenne Luz Moura).
+
+\bigskip
+
+\begin{abstract}
+Listamos alguns dos delimitadores de expressões matemáticas
+(parênteses, colchetes, piso, teto, módulo, etc.) e como controlar seu tamanho em
+expressões matemáticas.
+\end{abstract}
+
+\chapter{Controle ``automático'' do tamanho de delimitadores}
+
+Alguns símbolos mudam de tamanho de acordo com o modo matemático
+(parágrafo ou destaque) usado para escrevê-los. Por exemplo,
+compare~\(\sum_i f(i)\) e
+\[
+\sum_i f(i).
+\]
+
+Quando estamos compondo expressões mais complexas, digamos, com termos
+agrupados entre parênteses, podemos aumentá-los, parad a dar mais
+clareza à expressão:
+\[
+\left[\sum_i^{30} f(i)\right] ^2; 
+\quad \text{é mais claro que}\quad 
+[\sum_i f(i)]^2
+\]
+
+O resultado acima (à esquerda) é obtido usando o par de comandos \cs{right}
+e~\cs{left}:
+\begin{exemplo}
+\verb/\left[  \sum_i^{30} f(i)  \right] ^2/.
+\end{exemplo}
+Ao colocar \cs{left} e \cs{right} precedendo os delimitadores que
+envolvem uma expressão, eles são aumentados automaticamente. Assim,
+\begin{exemplo}
+\verb/\[ \left\lfloor \frac{ x^2 }{3} \right\rfloor \]/ produz 
+\(\displaystyle \left\lfloor \frac{ x^2 }{3} \right\rfloor \).
+\end{exemplo}
+
+Os comandos \cs{left} e~\cs{right} aparecem sempre aos pares, e uma
+expressão pode conter mais de um par deles: 
+\begin{exemplo}
+\verb/\[\left( \left( x^2 \right)^3 \right).\]/
+produz
+\(\displaystyle \left( \left( x^2 \right)^3 \right).\)
+\end{exemplo}
+%produz
+%\[\left( \left( x^2 \right)^3 \right).\]
+que é bem diferente do resultado que obtamos sem usar \cs{left}
+e~\cs{right}: \(\displaystyle ( ( x^2 )^3 ).\)
+
+Quando desejamos apenas um dos delimitadores, é possível usar um ponto
+\astt{.} para omitir o outro. Por exemplo
+\begin{exemplo}
+\verb/\[ \left. \frac{ax^2}{b} \right|_a^b \]/
+produz
+\(\displaystyle
+\left. \frac{ax^2}{b} \right|_a^b \).
+\end{exemplo}
+onde o par de delimitadores é ``\verb/\left./'' e~``\verb/\right|/''.
+O primeiro deles é invisível e serve apenas para delimitar a
+expressão.\footnote{Precisamos informar ao computador qual é o início
+  e o fim da expressão, para que ele possa calcular o quanto deve
+  ampliar o delimitador.}
+
+\chapter{Controle manual do tamanho}
+
+Os diversos delimitadores ampliados podem ser acessados diretamente
+usando os comandos~``\cs{big}'', ``\cs{Big}'', ``\cs{bigg}'',
+e~``\cs{Bigg}''. Por exemplo, compare os resultados abaixo. À
+esquerda, usamos dimensionamento automático (\cs{left} e \cs{right}),
+e, à direita escolhemos manualmente o tamanho dos parênteses.
+\[
+\left(\sum_{a\in A} f(a) + b\right)^2 \quad\text{\emph{versus}}\quad \Bigl(\sum_{a\in A} f(a) + b \Bigl)^2.
+\]
+
+Abaixo estão alguns exemplos de delimitadores em todos esses tamanhos.
+
+\newcommand{\ampe}{e} \newlength{\mylength}
+\setlength{\mylength}{1\baselineskip}
+\begin{exemplo}
+\begin{tabular}{rc}
+\astt{(} \ampe\ \astt{)} produzem 
+  & \(\displaystyle \Bigg( \bigg( \Big( \big( ( a+\cdots+z ) \big) \Big) \bigg) \Bigg)\)\\[\mylength]
+\astt{[} \ampe\ \astt{]} produzem 
+  & \(\displaystyle \Bigg[ \bigg[ \Big[ \big[ [ a+\cdots+z ] \big] \Big] \bigg] \Bigg]\)\\[\mylength]
+\astt{\{} \ampe\ \astt{\}} produzem
+  & \(\displaystyle \Bigg\{ \bigg\{ \Big\{ \big\{ \{ a+\cdots+z \} \big\} \Big\} \bigg\} \Bigg\}\)\\[\mylength]
+``\cs{langle}'' \ampe\ ``\cs{rangle}'' produzem
+  & \(\displaystyle \Bigg\langle \bigg\langle \Big\langle \big\langle  \langle a+\cdots+z \rangle \big\rangle \Big\rangle \bigg\rangle \Bigg\rangle\)\\[\mylength]
+``\cs{lceil}'' \ampe\ ``\cs{rceil}'' produzem
+  & \(\displaystyle \Bigg\lceil \bigg\lceil \Big\lceil \big\lceil \lceil a+\cdots+z \rceil \big\rceil \Big\rceil \bigg\rceil \Bigg\rceil\)\\[\mylength]
+``\cs{lceil}'' \ampe\ ``\cs{rceil}'' produzem
+  & \(\displaystyle \Bigg\lfloor \bigg\lfloor \Big\lfloor \big\lfloor \lfloor a+\cdots+z \rfloor \big\rfloor \Big\rfloor \bigg\rfloor \Bigg\rfloor\)\\[\mylength]
+\astt{|} produz
+  & \(\displaystyle \Bigg| \bigg| \Big| \big| | a+\cdots+z | \big| \Big| \bigg| \Bigg|\)\\[\mylength]
+\cs{|} produz
+  & \(\displaystyle \Bigg\| \bigg\| \Big\| \big\| \| a+\cdots+z \| \big\| \Big\| \bigg\| \Bigg\|\)\\[\mylength]
+\end{tabular}
+\end{exemplo}
+Mas a história não termina aqui. O \emph{espaçamento} entre
+delimitadores e os elementos torno de si também pode ser
+controlado. Cada um dos comandos aumentadores existe em três
+modalidades: esquerdo (\emph{\textbf{L}eft}) , centro
+(\emph{\textbf{M}iddle}) e direito (\emph{\textbf{R}ight}). Por
+exemplo, \verb/\[\bigl\{ a + b \bigm| a\in A, b\in B \bigr\}\]/
+resulta em
+\[\bigl\{ a + b \bigm| a\in A, b\in B \bigr\},\]
+ao passo \verb/\[\big\{ a + b \big| a\in A, b\in B \big\}\]/ resulta em
+\[\big\{ a + b \big| a\in A, b\in B \big\},\]
+e ainda \verb/\[\{ a + b | a\in A, b\in B \}\]/ resulta em
+\[\{ a + b | a\in A, b\in B \}.\]
+Compare ainda \verb/\[ x &= \sin\left(\frac12\right) \]/ com a (melhor) alternativa
+\verb/\[ x = \sin\biggl(\frac12\biggr)\]/:
+\begin{align*}
+ x &= \sin\left(\frac12\right)  \\
+ x &= \sin\biggl(\frac12\biggr)
+\end{align*}
+
+
+\chapter{Exercícios}
+
+
+\end{document}
