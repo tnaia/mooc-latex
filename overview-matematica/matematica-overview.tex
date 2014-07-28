@@ -4,6 +4,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+% Fontes matemáticas =================================================
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+
 % Idioma =============================================================
 \usepackage[brazil]{babel}
 
@@ -26,6 +30,7 @@
 \newcommand{\opcionais}{
    \par Opcional\dotfill\ignorespaces}
 
+\newcommand{\pacote}[1]{\textsf{#1}}
 
 % Deixando a coluna de texto um pouco mais gorda =====================
 \settypeblocksize{23cm}{13cm}{*}
@@ -46,7 +51,7 @@
 
 \medskip
 
-\noindent 25/07/2014: correções gramaticais (Shayenne Moura).
+\noindent 25/07/2014: correções gramaticais (Shayenne Luz Moura).
 
 \bigskip
 
@@ -158,15 +163,16 @@ $\subseteq$ & \cs{subseteq} &
 $\supseteq$ & \cs{supseteq}
 \end{tabular}
 
-\section{Soma, limite, integral}
+\section{Soma, produto, limite, integral}
 
-Os símbolos \cs{sum} (somatório), \cs{lim} (limite) e \cs{int}
+Os símbolos \cs{sum} (somatório), \cs{prod} (produtório), \cs{lim} (limite) e \cs{int}
 (integral) são em geral grandes, e têm um comportamento diferente
 quando usamos subscrito e sobrescrito.
 
 \begin{itemize}
 \item ``\verb/\(\sum_i a_i\)/'' produz \(\sum_i a_i\)
 \item ``\verb/\(\sum_{j = 0} ^ n b_j\)/'' produz \(\sum_{j = 0} ^ n b_j\)
+\item ``\verb/\(\prod_{j \in P} a_j\)/'' produz \(\prod_{j \in P} a_j\)
 \item ``\verb/\(\lim_{x \to c} f(x) = f(c) \pm K\)/'' produz \(\lim_{x \to c} f(x) = f(c) \pm K\)
 \item ``\verb/\(\int_a ^ b x dx\)/'' produz \(\int_a ^ b x dx\)
 \end{itemize}
@@ -181,8 +187,22 @@ quando usamos subscrito e sobrescrito.
 \(\lor\) & \cs{lor} &
 \(\lnot\) & \cs{lnot} \\
 \(\pm\) & \cs{pm} &
-\(\mp\) & \cs{mp} &
+\(\mp\) & \cs{mp} \\
+\(\times\) &  \cs{times} & \(\otimes\) & \cs{otimes} \\
+\(\div\) &  \cs{div} & \(\cap\) & \cs{cap} \\
+\(\cup\) &  \cs{cup} & \(\neq\) & \cs{neq} \\
+\(\leq\) &  \cs{leq} & \(\geq\) & \cs{geq} \\
+\(\in\) &  \cs{in} & \(\perp\) & \cs{perp} \\
+\(\notin\) &  \cs{notin} & \(\subset\) & \cs{subset} \\
+\(\simeq\) &  \cs{simeq} & \(\approx\) & \cs{approx} \\
+\(\wedge\) &  \cs{wedge} & \(\vee\) & \cs{vee} \\
+\(\oplus\) &  \cs{oplus} & \(\otimes\) & \cs{otimes} \\
+\(\Box\) &  \cs{Box} & \(\boxtimes\) & \cs{boxtimes} \\
+\(\equiv\) &  \cs{equiv} & \(\cong\) & \cs{cong}
 \end{tabular}
+
+
+
 
 \chapter{Exercícios}
 
@@ -194,11 +214,28 @@ encontrar na internet.
 \begin{enumerate}
 \item \(\displaystyle a + {3x \choose x} = \beta^2\)
 \item \(\displaystyle E=mc^2\)
+\item \(\displaystyle (a^2)^{3a + 4x} < \infty\)
 \item \(\displaystyle \sum_{i=0}^\infty 0 = 0\)
 \item \(\displaystyle \lim_{x\to \infty} \frac{1}{x} \leq  0 + \varepsilon \)
 \item \(\displaystyle \sin^2 x + \cos^2 x = 1\)
+\item \(\displaystyle \sin(a+b) = \sin(a)\cos(b) + \sin(b)\cos(a)\)
 \item \(\displaystyle \Delta + \frac{\partial f}{\partial x} \geq  h(y)\)
 \item \(\displaystyle a \in A \subset B\)
 \end{enumerate}
+
+\chapter{Outras letras}
+
+Usando o pacote \pacote{amssymb} (note os dois `s'), temos à
+disposição ainda outras letras.
+
+\begin{tabular}{lll}
+Resultado & Comando & Pacote necessário\\\toprule
+\(\mathrm{ABCDE abcde1234}\) & \verb/\(\mathrm{ABCDE abcde 1234}\)/ \\
+\(\mathit{ABCDE abcde1234}\) & \verb/\(\mathit{ABCDE abcde 1234}\)/ \\
+\(\mathnormal{ABCDE abcde1234}\) & \verb/\(\mathnormal{ABCDE abcde 1234}\)/ \\
+\(\mathcal{ABCDE abcde1234}\) & \verb/\(\mathcal{ABCDE abcde 1234}\)/ \\
+\(\mathfrak{ABCDE abcde1234}\) & \verb/\(\mathfrak{ABCDE abcde 1234}\)/ \\
+\(\mathbb{ABCDE abcde1234}\) & \verb/\(\mathbb{ABCDE abcde 1234}\)/ \\
+\end{tabular}
 
 \end{document}
