@@ -82,7 +82,7 @@ Bib\TeX\ para formatar corretamente a referência.
 
 Um exemplo: Uma referência a um artigo (article), entitulado ``Pé de
 Laranja Lima'' (title), escrito por José Pereira (author) em 1930
-(year) e publicado pela editora (publisher) Patatas seria anotado da
+(year) e publicado pela editora Patatas (publisher) pode ser anotado da
 seguinte forma:
 
 \begin{verbatim}
@@ -100,7 +100,7 @@ entrada bibliográfica (comando ``\verb/\cite{jose}/'').
 
 Na verdade, os rótulos não podem ser qualquer coisa. Eles \emph{não
 podem conter} acentos, cedilha ou vírgula. Você estará em águas
-seguras ao usar os caracteres abaixo para rótulos.
+seguras se usar apenas os caracteres abaixo.
 
 \begin{verbatim}
 abcdefghijklmnopqrstuvwxyz
@@ -112,9 +112,9 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 As informações que identificam uma referência variam de acordo com o
 tipo de entrada bibliográfica. Sendo assim, é natural usar campos
-distintos na bibliografia; uma referência a um periódico pode incluir
-o volume e o número da edição, mas isso não faz muito sentido para
-um~livro. Os~campos (informações) podem ser de três tipos:
+distintos na bibliografia; uma referência a uma tese deve incluir
+o nome da escola, mas isso não faz muito sentido para
+livros em~geral. Os~campos (informações) podem ser de três tipos:
 
 
 \begin{description}
@@ -125,7 +125,7 @@ erro e pode resultar em uma bibliografia mal-formatada. Se a
 informação requerida não for relevante para a entrada que você está
 editando, é provável que você esteja usando um tipo de entrada
 bibliográfica inadequado (por exemplo, está usando tipo de entrada
-artigo para uma~tese).
+\emph{artigo} para uma~\emph{tese}).
 
 
 \item[Opcional]
@@ -278,10 +278,10 @@ de~entradas razoavelmente abrangente.
 % handle almost any reference reasonably well.
 
 
-O bibtex ignora se o tipo da entrada é escrito em minúsculas ou
+O Bib\TeX\ ignora se o tipo da entrada é escrito em minúsculas ou
 maiúsculas (Por exemplo: \verb/article/, \verb/ARTICLE/
 e \verb/Article/ são iguais; assim como \verb/author/, \verb/AUTHOR/
-e~\verb/Author/).
+e~\verb/auTHOR/).
 
 A seguir está uma entrada bibliográfica correspondente a um livro. Os
 campos obrigatórios estão todos preenchidos, e dois campos (quais?)
