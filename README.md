@@ -10,6 +10,11 @@ MOOC[^1] produzido pelo PoliGNU[^2].
 Para simplificar a distribuição dos módulos desagrupados, cada "item"
 do material está em uma pasta.
 
+Notas
+-----
+
+O material na pasta `aulas-anteriores` está sendo reorganizado,
+e os arquivos devem mudar para alguma pasta em breve.
 
 Licença
 -------
