@@ -1,0 +1,24 @@
+% Um exemplo com comandos personalisados
+
+
+\input{cabecalho}
+
+\newcommand{\defi}[1]{#1\marginpar{#1}}
+
+\begin{document}
+
+A \defi{EPAC} é a agência nacional das siglas,
+e a \defi{FOLAT} é a empresa de papel.
+
+Como dissmos, a FOLAT em 1930\ldots
+
+Vamos encher um pouco de linguiça,
+para que o texto pareça ser mais real.
+
+
+Este parágrafo tem uma
+nota\marginpar{Ao lado!} marginal. 
+Note que uma nota marginal 
+é diferente de uma nota 
+de rodapé\footnote{Como esta aqui.}.
+\end{document}

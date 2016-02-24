@@ -1,0 +1,53 @@
+\documentclass[12pt,article,oneside]{memoir}
+% Resultados semelhantes a
+% \documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+\begin{document}
+
+Listas ``não-ordenadas'':
+\begin{itemize}
+\item laranja
+\item banana
+\item maçã
+\end{itemize}
+
+Ordenando\ldots
+\begin{enumerate}
+\item laranja
+\item banana
+\item maçã
+\end{enumerate}
+
+Ordenando\ldots
+\begin{enumerate}[a.]
+\item laranja
+\item banana
+\item maçã
+\end{enumerate}
+
+Ordenando com sublista\ldots
+\begin{enumerate}[(i)]
+  \item laranja
+
+  \begin{enumerate}[a.]
+    \item laranja
+    \item banana
+    \item maçã
+  \end{enumerate}
+
+\item banana
+\item maçã
+\item abacaxi
+\end{enumerate}
+
+Descrições
+\begin{description}
+\item[laranja] tem cor de\ldots
+\item[banana] parece um sorriso
+\item[maçã] preferida da branca de neve
+\end{description}
+\end{document}

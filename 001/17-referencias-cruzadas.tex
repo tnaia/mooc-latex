@@ -1,0 +1,34 @@
+% Referências cruzadas
+
+\input{cabecalho}
+
+% Links clicáveis
+\usepackage{hyperref}
+
+\begin{document}
+
+
+%Índice
+\tableofcontents
+
+Na seção \ref{sec:segunda} discutimos alfaces, e concluímos no capítulo \ref{cap:conclusao}.
+
+\chapter{Introdução}
+% Apelido, rótulo
+\label{intro}
+
+\section{Primeira}
+\section{Um e meio}
+\section{Um e dois terços}
+\section{Um e três quartos}
+
+\clearpage
+\section{Segunda}
+\label{sec:segunda}
+
+\clearpage
+\chapter{Complicações}
+
+\chapter{Conclusão}
+\label{cap:conclusao}
+\end{document}

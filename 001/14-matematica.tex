@@ -1,0 +1,180 @@
+\input{cabecalho}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% Novos operadores matemáticos
+\DeclareMathOperator{\sen}{sen}
+
+\begin{document}
+
+\chapter{Dois jeitos de escrever fórmulas}
+
+Uma formula é \(a+b+c+10\), a chamada
+fórmula "na linha" (inline), porque fica
+no meio do texto. Compare com \[a+b+c+10,\]
+o chamado modo "destaque".
+Uma formula é \(a + b  +  c      +10\).
+
+\chapter{Algumas expressões básicas}
+
+\begin{itemize}
+\item soma: \(a + b + c\);
+\item subtração: \(a + b - c\);
+\item multiplicação: \(a + b c\);
+\item produto: \(a + b \times c\);
+\item divisão: \(a + b / c\);
+\item divisão: \(a + b \div c\).
+\end{itemize}
+
+"Reticências" para fórmulas:
+
+Os números naturais são~\(1,2,3,\ldots\)
+
+A soma desses números é~\(1+2+3+\cdots\)
+
+Fração com dois andares: \(\frac{a}{b}\)
+
+Fração com dois andares: \(10 + \frac{a+b}{bc}\)
+
+Fração com dois andares: \[10 + \frac{a+b}{bc}\]
+
+Frações mais complicadas
+\[
+10 + \frac{a+b}{bc + \frac{2}{3+c}}
+\]
+
+% sqrt = square root = raiz quadrada
+Raízes~\(\sqrt{2}\) é irracional.
+
+Outras:~\(\sqrt[3+a]{20}\)
+
+\[
+\sqrt[2/(3+a)]{a+bc}
+\]
+
+\section{Sobrescrito}
+
+\[
+(a+bc)^2
+\]
+
+\[
+(a+bc)^{23}
+\]
+
+\[
+(a+bc)^{\frac{1}{2/(3+a)}}
+\]
+
+Com conjuntos, \(A^*\) 
+é diferente de \(A*\).
+
+\section{Subscrito}
+
+Coeficientes: \(a_1, b_2, \ldots\)
+
+Mais complicado
+\[
+a_{3b + 1} + 10
+\]
+é diferente de 
+\[
+a_3b + 1
+\]
+
+\chapter{Relações entre expressões}
+
+Se \(0 < a < b\), então
+\[
+a^2 < b^2.
+\]
+Por outro lado, se~\(a < b < 0\), então
+\[
+a^2 > b^2.
+\]
+
+% menor ou igual: less than or equal <=
+Se~\(a \leq b\),
+% maior ou igual: greater than or equal >=
+e~\(a \geq b\),
+então
+\(a=b\).
+
+% diferente: not equal
+Se~\(a<b\) ou~\(a>b\) então~\(a \neq b\).
+
+\clearpage
+\section{Operadores}
+
+\begin{itemize}
+\item seno \(\sin x\)
+\item cosseno \(\cos x\)
+\item logaritmo sem base \(\log x\)
+\item logaritmo natural \(\ln x\)
+\item logaritmo com base \( \log_{10} x\)
+\end{itemize}
+
+\section{novos operadores}
+
+Use o comando DeclareMathOperator 
+(veja preâmbulo): \(\sen x\)
+
+\chapter{Implicações}
+
+Se \(A\), então~\(B\).
+\[
+A \implies B
+\]
+Se e somente se
+\[
+A \iff B
+\]
+
+\chapter{Flechas}
+
+Seja~\(f\) uma função dos naturais nos reais
+\[
+f\colon N \to R
+\]
+\[
+f: N \to R
+\]
+
+\chapter{Somas e limites}
+
+\[
+1+2+\cdots + n = \frac{n(n-1)}{2}.
+\]
+ou
+\[
+\sum_{i=1}^n i = \frac{n(n-1)}{2}
+\]
+
+Matemática amadora \((fg)' = f'g + fg'\)
+\[
+\int_a^b fg' = fg - \int f'g
+\]
+
+Limites~\(\lim_{x\to 0} f(x) = C\).
+\[
+\lim_{x\to 0} f(x) = C.
+\]
+\end{document}
+
+
+
+se, então
+
+contido, contém
+pertence
+
+somas e integrais
+
+
+
+
+
+
+

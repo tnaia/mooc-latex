@@ -1,0 +1,44 @@
+\documentclass[12pt]{memoir}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+
+% Para novos comandos:
+\newcommand{\Pergunta}{Pergunta:}
+
+% Comando flexível (ou com parâmetros)
+\newcommand{\especie}[1]{\textbf{#1}}
+
+
+% Para novos ambientes:
+\newenvironment{questao}{\par\textbf{Questão:}}{\par}
+
+\newenvironment{resposta}{\par\textbf{Exemplo de solução:}}{\par}
+
+
+\begin{document}
+
+
+Entrega até sexta-feira.
+\begin{questao}
+Qual é a capital da Assíria?
+\end{questao}
+
+Fique à vontade para consultar um atlas.
+
+\begin{questao}
+Qual é o sentido da vida?
+\end{questao}
+
+\begin{resposta}
+Exemplo de resposta para os alunos estudarem.
+\end{resposta}
+
+\begin{questao}
+Qual o animal mais comum:
+\especie{Drosophila} ou \especie{Canis}?
+\end{questao}
+
+\end{document}

@@ -1,0 +1,73 @@
+% Tabelas
+
+\input{cabecalho}
+\usepackage{hyperref}
+
+\begin{document}
+
+\listoftables
+Veja a Tabela~\ref{tab:horarios}.
+\begin{table}
+% Horários na semana
+%       | seg | ter | qua |...
+% 10:00 |     |     |     |
+% 11:00 |     |     |     |
+% 13:00 |     |     |     |
+% 14:00 |     |     |     |
+\begin{center}
+\begin{tabular}{rlllll}
+\hline
+   & seg & ter & qua & qui & sex \\
+   \hline
+9 & João& José&     &     &     \\
+11 &     &     &     &     &     \\
+13 &     &     & Tina&     &     \\
+14 &     &     &     &     &     \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Horários da semana}
+\label{tab:horarios}
+\end{table}
+
+\clearpage
+
+
+
+
+
+\begin{tabular}{c@{ está valendo $\to$ }r@{,}l}
+maçã   &   2 & 30 \\
+banana &  10 & 50 \\
+pera   & 999 & 00 
+\end{tabular}
+
+
+
+
+\clearpage
+% Currículo
+% período |atividades...
+%
+\begin{tabular}{r|p{8cm}}
+2011--hoje & estou trabalhando com arrumação da minha casa (papéis, papéis\ldots)\\
+2005--2010 & graduação metafísica\newline
+Universidade Dali\\[10pt]
+2005--2010 & graduação filosofia\\
+2005--2010 & graduação matemática\\
+\end{tabular}
+
+
+\cleartable
+
+% Existem programas para ajudar a formatar
+% tabelas (online, o próprio texmaker, etc.)
+
+% Pacotes úteis
+% - Tabelas grandes: longtable
+% - Tabelas mais sofisticadas: booktabs
+
+
+
+
+\end{document}

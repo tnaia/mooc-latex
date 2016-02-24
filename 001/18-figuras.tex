@@ -1,0 +1,38 @@
+% Figuras
+
+\input{cabecalho}
+\usepackage{hyperref}
+
+% Para inserir figuras
+\usepackage{graphicx}
+
+\begin{document}
+
+\tableofcontents
+
+\listoffigures
+\chapter{Introdução}
+
+Vamos falar de aves do paraíso.
+Veja a figura \ref{fig:paraiso}.
+
+\chapter{Aves do paraíso}
+
+% figura chamada paraiso.jpg
+\includegraphics[scale=0.3]{paraiso} 
+
+
+\includegraphics[width=3cm]{paraiso} 
+
+\includegraphics[height=3cm]{paraiso} 
+
+
+
+
+\begin{figure}
+\begin{center}\includegraphics[width=8cm,height=3cm]{paraiso} 
+\end{center}
+\caption{Aves do paraíso, num galho.}
+\label{fig:paraiso}
+\end{figure}
+\end{document}
