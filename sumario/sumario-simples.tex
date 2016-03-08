@@ -1,0 +1,107 @@
+% Based on Gonzalo Medina's answer at
+% http://tex.stackexchange.com/questions/55607/page-number-before-chapter-title-in-the-table-of-contents-with-memoir
+
+\documentclass{memoir}
+
+% ESCREVER EM PORTUGUÊS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+% PARA ESCREVER ENDEREÇOS NA INTERNET %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% o parâmetro `hyphens` faz com que links \url{www.wikipedia.org}
+% possam ser hifenados.
+\usepackage[hyphens]{url}
+
+% FORMATAÇÃO DO SUMÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Redefinir estilo do título do sumário
+\renewcommand\printtoctitle[1]{\HUGE#1}
+
+% redefinitions for chapter entries
+\renewcommand\chapternumberline[1]{}
+
+% nome do capítulo escrito grande
+\renewcommand\cftchapterfont{\LARGE} 
+% número da página escrito grande e em itálico
+\renewcommand\cftchapterpagefont{\LARGE \itshape} 
+
+
+% Formatação de cada linha do sumário correspondendo a um capítulo
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Estamos definindo aqui o comando \l@mychap
+% 
+\makeatletter
+\newcommand\l@mychap[3]{%
+  \bigskip% pulo vertical
+  \par\noindent% novo parágrafo, sem indentação
+  \parbox{\dimexpr\textwidth-15pt\relax}{%
+    \cftchapterfont#1, {\cftchapterpagefont#2}%
+  }\par%
+}
+
+% Este é o comando que o memoir usa, escrevemos ele
+% de modo que use o comando \l@mychap acima.
+\renewcommand*\l@chapter[2]{%
+  \l@mychap{#1}{#2}{\chaptername}%
+}
+\makeatother
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\noindent{\LARGE Formatação do sumário usando memoir}\hfill 8 de março de 2016
+
+\medskip
+
+\noindent Tássio Naia dos Santos
+
+\medskip
+
+% Anote aqui se fizer modificações, usando o seguinte formato
+%
+%\noindent dd/mm/aaaa: mudança (queam)
+%
+% Por exemplo:
+%
+%\noindent 30/2/2222: correções gramaticais (Lucas Silva e Silva)
+
+
+\bigskip
+
+\begin{abstract}
+Aqui está um sumário modificado.
+A única alteração é o~modo como o~sumário formata linhas 
+correspondendo a~capítulos (\cs{chapter}). 
+Seções (\cs{section}) continuam formatadas 
+do jeito padrão.
+Lembre-se de que para atualizar o sumário é preciso compilar
+o~documento duas vezes.
+\end{abstract}
+
+\tableofcontents*
+
+\chapter{Pela toca do coelho}
+\chapter{O lago das lágrimas}
+\chapter{A corrida e a longa história}
+% mudar o número da página para o exemplo
+\setcounter{page}{14}
+
+\chapter{Um título que é longo, mas tão longo, que algumas pessoas vão achar longo demais}
+\chapter{Pílulas do pé-de-vento}
+\section{Tradição, uma seção}
+\section{Bis!}
+\section{Três para dar sorte}
+
+\chapter{F\dotfill im}
+
+\chapter*{Agradecimentos \& crédito}
+
+Este exemplo é baseado na resposta que Gonzalo Medina escreveu em \url{http://tex.stackexchange.com/questions/55607/page-number-before-chapter-title-in-the-table-of-contents-with-memoir}.
+
+\end{document}

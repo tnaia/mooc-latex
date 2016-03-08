@@ -3,9 +3,9 @@
 *.out
 *.toc
 *.lof
+*.lot
 *.fot
 *.log
 *.pdf
 *.tar.gz
 *.synctex.gz
-
