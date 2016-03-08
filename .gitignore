@@ -1,5 +1,11 @@
 *~
 *.aux
+*.out
+*.toc
+*.lof
+*.fot
 *.log
 *.pdf
 *.tar.gz
+*.synctex.gz
+
