@@ -1,0 +1,48 @@
+% Erros comuns
+\documentclass[14pt,a5paper]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% cores no texto
+\usepackage{tikz}
+
+% nosso comando para destacar
+% mensagens de erro
+\newcommand{\msgerr}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+
+
+\begin{description}
+
+\item[Comando desconhecido]
+
+   Mensagem: \msgerr{! Undefined control sequence.}
+
+   Significa que digitamos algum comando errado,
+   ou que está faltando acrescentar o pacote
+   correspondente.
+
+\item[Arquivo acabou quando\ldots]
+
+   Mensagem: \msgerr{! File ended 
+   while scanning use of XXXX.}
+   
+   Parecido com \msgerr{! Paragraph ended before \textbackslash begin was complete.}
+   
+   Significa que provavelmente faltou fechar
+   alguma chave.
+   
+\item[Caracteres especiais usados sem querer]
+
+	exemplo 10\% das pessoas\ldots
+	
+	Podem ser difíceis de encontrar porque quase todo tipo de erro pode ser causado assim.
+	
+\item[Avisos (warnings)]
+
+   Coisas não tão sérias. E\-xxxxxemplodepalavragrande
+\end{description}
+
+Algumas palavras para ver qual é a largura deste texto. Mais um pouco só e chegamos lá. Algumas palavras para ver qual é a largura deste texto. Mais um pouco só e chegamos lá.
+\end{document}
