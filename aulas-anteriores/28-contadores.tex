@@ -1,0 +1,72 @@
+% 16-03-16
+% Contadores
+\documentclass[a6paper]{memoir}
+
+% Escrever em português
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+% Contador de exercícios
+% opções chapter, section, subsection
+\newcounter{exerc}[chapter]
+
+
+\newenvironment{exercicio}{%
+  \stepcounter{exerc}%
+  \par\textbf{Ex. \theexerc}}{%
+  \dotfill\par}
+
+
+\begin{document}
+
+\chapter{Lista de exercícios}
+
+Entrega dia 24/dez.
+
+\begin{exercicio}
+Alongamento.
+\end{exercicio}
+
+\begin{exercicio}
+Corrida.
+\end{exercicio}
+
+Exercício adicional (mas pode
+ser uma boa ideia fazer!)
+Daqui a 30 anos você vai ver!
+\begin{exercicio}
+Saltos.
+\end{exercicio}
+
+Por enquanto o contador exerc
+tem valor \theexerc.
+
+% Incrementar o contador
+\stepcounter{exerc}
+
+Agora o contador exerc
+tem valor \theexerc.
+
+% Escolher o valor do contador
+\setcounter{exerc}{30}
+
+Agora o contador exerc
+tem valor \theexerc.
+
+% Somar ao contador
+\addtocounter{exerc}{-2}
+
+Agora o contador exerc
+tem valor \theexerc.
+
+\chapter{No inverno}
+
+\begin{exercicio}
+Pula fogueira.
+\end{exercicio}
+
+\begin{exercicio}
+Pula fogueira. (de novo)
+\end{exercicio}
+\end{document}
