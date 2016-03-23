@@ -1,0 +1,52 @@
+% Usando o pacote siunitx
+% Exemplo de Joseph Wright
+% disponível em http://tex.stackexchange.com/questions/2248/what-package-should-i-use-to-typeset-units
+\documentclass[article]{memoir}
+\usepackage{siunitx}
+\sisetup{load-configurations = abbreviations}
+
+% Escrever em português e com utf-8
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+% Citar o link de onde vem o material
+\usepackage[hyphens]{url}
+
+\begin{document}
+
+\noindent{\LARGE Sistema Internacional de medidas}\hfill 23 de março de 2016
+
+\medskip
+
+\noindent Joseph Wright
+
+\medskip
+
+\noindent 25/07/2014: formatação do exemplo (Tássio Naia).
+
+
+\bigskip
+
+\begin{abstract}
+  Exemplos de expressões usando unidades do sistema intenacional de medidas (SI).
+\end{abstract}
+
+
+\chapter*{Agradecimentos \& crédito}
+
+Agradecemos a Joseph Wright, por criar o pacote \textsf{siunitx} e pelo
+exemplo abaixo, que foi obtido de
+{\footnotesize\url{http://tex.stackexchange.com/questions/2248/what-package-should-i-use-to-typeset-units}. A tradução e os erros são de responsabilidade
+de~Tássio Naia.
+
+\begin{itemize}
+  \item \SI{100}{\degreeCelsius}
+  \item \SI{3e5}{\km\per\s} or \SI[per-mode = symbol]{3e5}{\km\per\s}
+  \item \si{\newton\metre\squared\per\kilogram\squared} or 
+    \si[per-mode = symbol]{\newton\metre\squared\per\kilogram\squared}
+  \item \(  \SI{10}{\kilo\hertz} = \SI{1}{\per\second\tothe{4}} \)
+  \item \SI[parse-numbers = false]{\sin(x)}{\metre}
+\end{itemize}
+
+\end{document}
