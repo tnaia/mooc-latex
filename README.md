@@ -13,14 +13,25 @@ MOOC<sup>[1](#note1)</sup> produzido pelo [PoliGNU][polignu]<sup>[2](#note2)</su
 Para simplificar a distribuição dos módulos desagrupados, cada "item"
 do material está em uma pasta.
 
+Próximos passos
+---------------
+
+1. [ ] [episódios-piloto](https://www.youtube.com/channel/UCO04uZ19vbFrNNFAW5G1mrw)
+2. [ ] gravar/editar os vídeos (versão final)
+3. [ ] polir o material didático
+4. [ ] bolar as questões, tarefas e desafios
+5. [ ] carregar o material no EdX
+6. [ ] oferecer o curso!
 
 Roteiro para video-aulas
 ------------------------
 
 Tássio está escrevendo este roteiro para o curso do MOOC.
 
-O curso deve ter entre um mês e meio e dois meses,
+O curso terá entre um mês e meio e dois meses,
 com ~1h30 de vídeo por semana.
+
+Os dois primeiros módulos são liberados na primeira semana.
 
 ## Módulo 0 &mdash; Boas vindas e introdução
 - [ ] o que é, o que é? (show de exemplos)
