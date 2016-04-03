@@ -12,20 +12,45 @@
 
 \title{\textbf{\HUGE {Lista de Exercícios: Dinâmica}}}
 \date{}
-%\maketitle
+
+
+%% Vamos numerar os exercícios usando um contador
+\newcounter{exerc}
+\setcounter{exerc}{0}
 
 
 % Para novos ambientes: 
-\newenvironment{questão}{\textbf {Questão:}}{\par\smallskip}
-\renewenvironment{questão}{\textbf {Questão:}}{\vspace{1cm}}
+% outros espaços verticais possíveis
+% \smallskip \medskip \bigskip
+\newenvironment{questão}{%
+\refstepcounter{exerc}%
+\textbf {Questão \theexerc:}}{\medskip}
+
+%% Exemplo de novo ambiente:
+%%
+%% \newenvironment{xxx}{aaa}{bbb}
+%% 
+%% \begin{xxx}
+%% aqui e agora
+%% \end{xxx}
+%% 
+%% aaa
+%% aqui e agora
+%% bbb
+%% 
 \begin{document}
 
+
+
 \maketitle
+
+Entregar até terça-feira. A questão \ref{vale-mais} vale mais pontos!
+
 \begin{questão}
 Um corpo com massa de 5 kg é submetido a uma força de intensidade 25N. Qual é a aceleração que ele adquire?
 \end{questão}
 
-\begin{questão}
+\begin{questão}\label{vale-mais}
 Quando a resultante das forças que atuam sobre um corpo é 10N, sua aceleração é 4 m/s2. Se a resultante das forças fosse 12,5N a aceleração seria de:
 \end{questão}
 
@@ -75,58 +100,6 @@ Um corpo com massa de 60 kg está na superfície do planeta Marte, onde a aceler
 
 \end{enumerate}
 \end{questão}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 \end{document}
 
