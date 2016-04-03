@@ -2,10 +2,11 @@ Material para o curso MOOC de LaTeX do PoliGNU
 ----------------------------------------------
 
 Arquivos-fonte para o material de referência do curso de LaTeX formato
-MOOC[^1] produzido pelo PoliGNU[^2].
+MOOC<sup>(1)[#note1]</sup> produzido pelo (PoliGNU)[polignu]<sup>(2)[#note2]</sup>.
 
-[^1]: curso massivo aberto online, ou _Massive Online Open Course_
-[^2]: grupo de estudos de Software e Cultura Livres da Poli-USP
+<a name="note1"><sup>1</sup></a>: curso massivo aberto online, ou _Massive Online Open Course_
+<a name="note2"><sup>2</sup></a>: grupo de estudos de Software e Cultura Livres da Poli-USP.
+[polignu]: www.polignu.org
 
 Para simplificar a distribuição dos módulos desagrupados, cada "item"
 do material está em uma pasta.
@@ -26,7 +27,7 @@ Tássio está escrevendo este roteiro para o curso do MOOC.
 ## Módulo -- Arroz com feijão
 - [ ] texto puro! (marcação semântica, qual é a diferença?)
 - [ ] produzindo um documento (partes do documento, compilação)
-- [ ] os programas que vamos usar no curso (pdflatex, bibtex para bibliografia, 
+- [ ] os programas que vamos usar no curso (pdflatex, bibtex para bibliografia) 
 - [ ] os arquivos arquivos produzidos (pra quê servem) #mencionar que mais de uma etapa de compilação pode ser necessária
 - [ ] onde buscar ajuda? (lshort, comunidade, tex.stackexchange, OSQA para o MOOC?)
 - [ ] Erros comuns (confundir editor e compilador, 
