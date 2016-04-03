@@ -1,0 +1,21 @@
+\documentclass[a5paper,article]{memoir}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+\begin{document}
+
+Em 1985 Leslie Lamport criou o \LaTeX.
+Ele escreveu um pequeno manual em 1994 \cite{lamport94}.
+Ele certamente ouviu falar do
+livro de Darwin \cite{darwin}
+(mas nunca de~\cite{dexter}).
+
+% estilo pré-definidos:
+% - plain
+% - alpha
+\bibliographystyle{alpha}
+\bibliography{bib-2}
+\end{document}
