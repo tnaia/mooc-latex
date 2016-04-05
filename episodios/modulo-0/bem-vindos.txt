@@ -1,0 +1,21 @@
+
+       .= .-_-. =.    	
+      ((_/)o o(\_))       .─┐                         ╦
+       `-'(. .)`-'      ╦ ├─┤╔╦═══╗ ╦   ╔╦╗╔═╗╔═╗╔═╗  ║ 
+        /| \_/ |\       ║ ┴ ┴ ║┌─┐╚╦╝  	║║║║ ║║ ║║    ║
+       ( | GNU | )      ╩═╝   ╩├┤ ╔╩╗  	╩ ╩╚═╝╚═╝╚═╝  o  
+       /"\_____/"\             └─┘╝ ╚
+       \__)   (__/      
+  >> GNU é Liberdade! <<      Vídeo-aula           (teste)
+			      				    
+Imagem de Martin Dickopp      - sistema   (archlinux, dwm) 
+      Copyright 2004          - programas       (gravação) 
+                                 - recordmydesktop	    
+                              	  - screenkey		    
+			      	  - compton		    
+			      	  - xrandr		    
+			      - outros programas           
+			         - emacs    (editar texto) 
+			         - evince        (ver pdf) 
+			       
+                              
