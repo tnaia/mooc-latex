@@ -4,7 +4,7 @@ Material para o curso MOOC de LaTeX do PoliGNU
 Arquivos-fonte para o material de referência do curso de LaTeX formato
 MOOC<sup>[1](#note1)</sup> produzido pelo [PoliGNU][polignu]<sup>[2](#note2)</sup>.
 
-<a name="note1"><sup>1</sup></a>: curso massivo aberto online, ou _Massive Online Open Course_
+<a name="note1"><sup>1</sup></a>: curso massivo aberto online, ou _Massive Online Open Course_.
 
 <a name="note2"><sup>2</sup></a>: grupo de estudos de Software e Cultura Livres da Poli-USP.
 
