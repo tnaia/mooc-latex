@@ -1,0 +1,79 @@
+% Autor: Tássio Naia
+% Modificado: 16-03-13
+\documentclass[12pt]{memoir}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{tikz}
+% FORMATAÇÃO DO SUMÁRIO 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Redefinir estilo do título do sumário
+\renewcommand\printtoctitle[1]{\HUGE#1}
+
+% redefinitions for chapter entries
+\renewcommand\chapternumberline[1]{}
+
+% nome do capítulo escrito grande
+\renewcommand\cftchapterfont{\LARGE} 
+% número da página escrito grande e em itálico
+\renewcommand\cftchapterpagefont{\LARGE \itshape} 
+
+
+% Formatação de cada linha
+% do sumário correspondendo
+% a um capítulo
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Estamos definindo aqui o comando \l@mychap
+% 
+\makeatletter
+\newcommand\l@mychap[3]{%
+  \bigskip% pulo vertical
+  \par\noindent% novo parágrafo, sem indentação
+  \parbox{\dimexpr\textwidth-15pt\relax}{%
+    \cftchapterfont#1, {\cftchapterpagefont\textcolor{red}{#2}}%
+  }\par%
+}
+
+% Este é o comando que o memoir usa, escrevemos ele
+% de modo que use o comando \l@mychap acima.
+\renewcommand*\l@chapter[2]{%
+  \l@mychap{#1}{#2}{\chaptername}%
+}
+\makeatother
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% fim da formatação do sumário
+\begin{document}
+
+\title{O Romance da Ciência}
+\author{Carl Sagan}
+\date {}
+\maketitle
+\newpage
+
+\tableofcontents*
+
+\chapter{O Cérebro de Broca}
+\setcounter{page}{17}
+\chapter{Podemos conhecer o Universo?}
+\setcounter{page}{27}
+\chapter{Aquele mundo que acena como uma libertação}
+\setcounter{page}{33}
+\chapter{Louvor da ciência e tecnologia}
+\setcounter{page}{46}
+\chapter{Caminhantes noturnos e vendedores de mistérios: senso e contra-senso às margens da ciência} 
+\setcounter{page}{57}
+\chapter{Anãs Brancas e homenzinhos verdes}
+\setcounter{page}{81}
+\chapter{Vênus e o Dr. Velikovsky}
+\setcounter{page}{96}
+\chapter{Normam Bloom, mensageiro de Deus}
+\setcounter{page}{144}
+\chapter{Ficção científica -- uma visão pessoal}
+\setcounter{page}{153}
+
+
+
+
+\end{document}

@@ -1,0 +1,112 @@
+% Projeto referente ao episódio 4: mais comandos, e um pouco de matemática. 
+% Autoria: Michelle Sena
+% Modificado 2016-03-23
+%
+% Mudanças
+% 15-03-22 - 
+\documentclass[12pt]{memoir}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+\title{\textbf{\HUGE {Lista de Exercícios: Dinâmica}}}
+\date{}
+
+
+%% Vamos numerar os exercícios usando um contador
+\newcounter{exerc}
+\setcounter{exerc}{0}
+
+
+% Para novos ambientes: 
+% outros espaços verticais possíveis
+% \smallskip \medskip \bigskip
+\newenvironment{questão}{%
+\refstepcounter{exerc}%
+\textbf {Questão \theexerc:}}{\medskip}
+
+%% Exemplo de novo ambiente:
+%%
+%% \newenvironment{xxx}{aaa}{bbb}
+%% 
+%% \begin{xxx}
+%% aqui e agora
+%% \end{xxx}
+%% 
+%% aaa
+%% aqui e agora
+%% bbb
+%% 
+\begin{document}
+
+
+
+\maketitle
+
+Entregar até terça-feira. A questão \ref{vale-mais} vale mais pontos!
+
+\begin{questão}
+Um corpo com massa de 5 kg é submetido a uma força de intensidade 25N. Qual é a aceleração que ele adquire?
+\end{questão}
+
+\begin{questão}\label{vale-mais}
+Quando a resultante das forças que atuam sobre um corpo é 10N, sua aceleração é 4 m/s2. Se a resultante das forças fosse 12,5N a aceleração seria de:
+\end{questão}
+
+\begin{enumerate}[a)]
+
+\item 2,5 m/s2
+
+\item 5,0 m/s2
+
+\item 7,5 m/s2
+
+\item 2,0 m/s2
+
+\item 12,o m/s2
+
+\end{enumerate}
+
+
+
+\begin{questão}
+A primeira Lei de Newton afirma que, se a soma de todas as forças atuando sobre o corpo for zero, o corpo \ldots
+
+\begin{enumerate}[a)]
+
+\item terá um movimento uniformemente variado
+
+\item apresentará velocidade constante
+
+\item apresentará velocidade constante em módulo, mas sua direção poderá ser alterada.
+
+\item será desacelerado
+
+\item apresentará um movimento circular uniforme.
+
+\end{enumerate}
+\end{questão}
+
+
+
+\begin{questão}
+Um corpo com massa de 60 kg está na superfície do planeta Marte, onde a aceleração da gravidade é 3,71 m/s2 . De acordo com esses dados, responda:
+
+\begin{enumerate}[a)]
+\item Qual é o peso desse corpo na superfície de Marte?
+\item Suponha que esse mesmo objeto seja trazido para a Terra, onde g = 9,78 m/s2, qual será o seu peso?
+
+
+\end{enumerate}
+\end{questão}
+
+\end{document}
+
+
+
+
+
+
+
+

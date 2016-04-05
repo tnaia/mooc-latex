@@ -1,0 +1,40 @@
+\documentclass[12pt,a5paper]{memoir}
+
+% ========================================
+% Idioma e hifenação
+% ========================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+% ========================================
+% Cabeçalho e rodapé
+% ========================================
+% Comandos novos
+% \thepage - página atual
+% \thelastpage - última página do documento
+% \today - dia de hoje
+% \printtime - hora da compilação
+\newcommand{\numpag}{\footnotesize\thepage\ em \thelastpage}
+\newcommand{\autores}{\footnotesize A. Luno e O Rientador}
+\newcommand{\quando}{\tiny\today, às \printtime}
+\makeoddhead{plain}{\autores}{}{\numpag}
+\makeevenhead{plain}{\numpag}{}{\autores}
+
+% Formatação do rodapé
+\makeoddfoot{plain}{}{}{\quando}
+\makeevenfoot{plain}{\quando}{}{}
+
+% Estilo das páginas
+\pagestyle{plain}
+
+\begin{document}
+Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. Algum texto. 
+
+\vspace*{\fill}
+
+Fim da página 1.\clearpage
+Página 2.\clearpage
+Página 3.\clearpage
+Página 4.\clearpage
+\end{document}

@@ -1,0 +1,136 @@
+% fonte: http://tex.stackexchange.com/questions/25810/when-one-should-use-spacing-line-quad-or
+\documentclass[11pt,article]{memoir}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath}
+
+\usepackage{url} % para links
+\begin{document}
+
+\noindent{\LARGE Espaçamento em matemática}\hfill 03 de abril de 2016
+
+\medskip
+
+\noindent 03/04/2016: primeira versão (Tássio Naia).
+
+\bigskip
+
+\begin{abstract}
+  Algumas recomendações para o espaçamento em expressões matemáticas.
+  Muitos desses espaçamentos são automaticamente colocados uma vez que
+  se usa o pacote ``amsmath''. Veja o texto-fonte deste arquivo.
+\end{abstract}
+
+
+\chapter*{Agradecimentos \& crédito}
+
+Agradecemos a Gonzalo Medina; este texto é uma tradução de
+uma de suas respostas no site \url{tex.stachexchange.com}.
+A~tradução e os~erros são nossa~responsabilidade.
+
+\chapter{Nenhum espaço.}
+Entre dois símbolos e entre um número e o símbolo que ele está multiplicando:
+\[
+  ab\qquad xy\qquad 2a\qquad 2xz\qquad 4aC
+\]
+
+Antes e depois de índices, expoentes, parênteses, colchetes, chaves e barras
+verticais:
+\[
+  2x^2y_3z (x)y\qquad a\{b\}\qquad y[a]\qquad a\lvert x\rvert\qquad b\lVert y\rVert
+\]
+
+Em expressões com índice ou expoente:
+\[
+  \lim_{0\to a}\qquad a^{n-1}
+\]
+
+\chapter{Espaço fino}
+Antes e depois de símbolos usados como verbos:
+\[
+  a \subseteq 2
+\]
+
+Antes e depois de símbolos usados como conjunção:
+\[
+  a +2
+\]
+
+Depois, mas não antes $+$, $-$, $\pm$, $\mp$ usados como adjetivo:
+\[
+  a= -2
+\]
+
+Antes de vírgulas ao descrever conjuntos, sequências de frações e
+coordenadas:
+\[ (a,b,c) \]
+
+Antes e depois de símbolos de integração, somatório, produtório e
+união:
+\[
+  a\int x\,\mathrm{d}y
+\]
+O espaço fino entre $x$ e~$\mathrm{d}y$ na expressão acima \emph{não} é inserido
+automaticamente pelo~\TeX.
+
+Antes e depois de operadores com nome:
+\[
+a \sin x \qquad \log 2.
+\]
+Exceções: se alguma dessas funções for precedida ou seguida de parênteses,
+colchetes, chaves ou barras o espaço deve ser eliminado:
+\[
+a \sin \lvert x \rvert.
+\]
+
+Antes e depois de barras que aparecem sozinhas (sem par);
+a mesma regra aplica para dois-pontos usados como um símbolo
+matemático (e não como sinal de pontuação):
+\[
+  a \mid b
+\]
+
+Antes de índices à esquerda:
+\[
+a\,_2T_3
+\]
+O espaço fino entre $a$ e o índice que vêm a seguir (e que pertence ao'' $T$)
+\emph{não} é inserido automaticamente pelo~\TeX.
+
+Antes e depois de $\mathrm{d}s$, $\mathrm{d}x$, e combinações similares de $d$
+e outros símbolos:
+\[
+  \int f(x)\,\mathrm{d}x\qquad \iiint f(x)\,\mathrm{d}r\,\mathrm{d}\theta\,\mathrm{d}\phi
+\]
+
+\chapter{Espaço largo}
+Amtes de árênteses em congruências no texto: $z= a\pmod x$.
+
+Antes de condições matemáticas no corpo do texto: $t_n\ (n=1,2,\ldots, p)$
+
+\chapter{Quad ``eme''}
+Entre uma sentença simbólica e uma expressão verbal
+no modo destaque:
+\[
+  E_n(t) \to e^{-t}\quad\text{as }t\to\infty.
+\]
+
+Em torno de conjunções:
+\[
+x(a+b)\quad\text{or}\quad y(a-b).
+\]
+
+\chapter{Quad duplo-eme}
+Entre duas igualdades ou desigualdades na mesma linha, em destaque:
+\[
+x^2 + y^2 = a^2,\qquad x-y=b.
+\]
+
+Entre uma sentença simbólica e uma condição:
+\[
+x^n + y^n = a^n\qquad (n = 1,2,\ldots p).
+\]
+
+\end{document}

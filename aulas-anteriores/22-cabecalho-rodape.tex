@@ -1,0 +1,30 @@
+\documentclass[oneside]{memoir}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% ===========================================
+% Cabeçalho e rodapé
+% ===========================================
+% Criar nosso estilo de página
+\makepagestyle{novoestilo}
+% Cabeçalho de uma página par
+\newcommand{\numeropag}{{\thepage\ em \thelastpage}}
+
+\makeevenhead{novoestilo}{esquerda par}{centro par}{direita par}
+\makeoddhead{novoestilo}{esquerda ímpar}{centro ímpar}{direita ímpar}
+\makeevenfoot{novoestilo}{e}{c}{d \numeropag}
+\makeevenfoot{novoestilo}{e}{c}{d \numeropag}
+\pagestyle{novoestilo}
+
+
+
+
+%\thispagestyle{novoestilo}
+\begin{document}
+Página 1 \clearpage
+Página 2 \clearpage
+Página 3 \clearpage
+Página 4 \clearpage
+Página 5 \clearpage
+\end{document}

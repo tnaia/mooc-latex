@@ -1,6 +1,14 @@
+*.jpg
 *~
 *.aux
+*.out
+*.toc
+*.lof
+*.lot
+*.fot
 *.log
 *.pdf
 *.tar.gz
-*.toc
+*.synctex.gz
+*.bbl
+*.blg

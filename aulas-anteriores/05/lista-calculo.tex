@@ -1,0 +1,47 @@
+%Projeto aula 5: Matemática no LaTeX
+
+\documentclass[12pt]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcounter{exerc}
+
+% diferentes espaçamentos verticais
+% \smallskip, \medskip, \bigskip
+
+\newenvironment{exercício}{\stepcounter{exerc}
+\par{\textbf{Exercício.}
+\theexerc\par\smallskip}}{\par\bigskip}
+ 
+\begin{document}
+\title{\textbf{Lista de Cálculo \\ Licenciatura em Física}}
+\date{}
+\maketitle
+
+\begin{exercício}
+Calcule a área da região determinada por todos os pontos~(\(x,y\))~do plano tais que~\(x\geq 1+ y^2\)~ e ~\(2x+y\leq 2\)
+\end{exercício}
+
+\begin{exercício}
+Calcule a área entre cada parábola e o eixo~\(x.\)
+\begin{enumerate} [a)]
+\item \(x^2+3y = 9\)
+\item \(3x^2+4y = 48\)
+\item \(x^2+4x+2y = 0\)
+\item \(y+x^2-1 = 0\)
+\end{enumerate}
+\end{exercício}
+
+\begin{exercício}
+Ache a área limitada pela curva dada, o eixo \(x\) e as retas verticais dadas:
+\begin{enumerate}[a)]
+\item \(y = \sqrt{x+2},\)~~~~~~~~~~\(x = 2\)~~~e~~~\(x = 7\)
+\item \(y = \sqrt[3]{3-x},\)~~~~~~~~~~\(x = -5\)~~~e~~~\(x = 3\)\item \(y =x\sqrt{5-x^2},\)~~~~~~~~~~\(x = 0\)~~~e~~~\(x = \sqrt{5}\)
+\item \(y = x^2+4x+4,\)~~~~~\(x = -1\)~~~e~~~\(x = 1\)
+\end{enumerate}
+\end{exercício}
+\end{document}

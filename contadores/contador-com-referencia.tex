@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Autor: Tássio Naia
+% Criado: 16-03-16
+% Modificado: 16-03-16
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{memoir}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Escrevendo em português
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cria contador de receitas
+\newcounter{receita}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cria ambiente usando o contador
+%
+% Explicação:
+% O ambiente começa avançando o contador receita.
+% Usamos \refstepcounter em vez de \stepcounter
+% porque vamos escolher rótulos (\label) para
+% as receitas.
+%
+% Depois iniciamos um novo parágrafo (\par),
+% deixando um espaço vertical médio (\medskip),
+% e escrevemos "Receita #X" em negrito;
+% para terminar, depois de cada receita
+% iniciamos outro parágrafo.
+\newenvironment{receita}{%
+  \refstepcounter{receita}%
+  \par\medskip\noindent\textbf{Receita \thereceita.}}{%
+  \par}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\noindent{\LARGE Contadores e referências}\hfill 16 de março de 2016
+
+\medskip
+
+\noindent Tássio Naia Tandonnet
+
+\medskip
+
+\noindent 16/03/2016: primeira versão.
+
+\bigskip
+
+\begin{abstract}
+  Este é um exemplo de como usar contadores no \LaTeX\
+  de modo que seja possível referenciar os números
+  usando os comandos~\cs{ref} (e~\cs{label}).
+\end{abstract}
+
+\TeX nicalidades: o comando \cs{newcounter} cria um contador novo.
+Use \cs{refstepcounter} para aumentar o~valor do~contador.
+O ambiente ``receita'' foi criado assim:
+\begin{verbatim}
+\newenvironment{receita}{%
+  \refstepcounter{receita}%
+  \par\medskip\noindent\textbf{Receita \thereceita.}}{%
+  \par}
+\end{verbatim}
+
+Aqui estão alguns comentários sobre
+receitas culinárias. As receitas são numeradas,
+e podem ser referenciadas: por exemplo---recomendo
+bastante o~suco (receita~\ref{suco}) e também
+o~amendoim (receita~\ref{amendoim})!
+
+\begin{receita}
+  Bolo de banana e cenoura. Uma delícia!
+  Ainda me lembro do dia em que minha tia
+  preparou para a gente esse bolo, perto
+  do natal. Não sobrou nem farelo.
+\end{receita}
+
+\begin{receita}\label{amendoim}
+  Amendoim torrado. Não abuse do sal.
+  Esse é um favorito dos meus tios.
+  No inverno, minha avó prepara uma
+  bacia cheia, e tardes inteiras são
+  dedicadas à degustação e um bom
+  papo.
+\end{receita}
+
+\begin{receita}\label{suco}
+  Vitamina de beterraba, cenoura e laranja.
+  A favorita da garotada! Lembro bem da
+  vitamina no meio da manhã, no verão.
+  A gente corria tanto, e suava tanto!
+  Quando vinha o chamado pro suco a gente
+  corria ainda mais. Que refrescante
+  essa lembrança.
+\end{receita}
+
+
+\end{document}

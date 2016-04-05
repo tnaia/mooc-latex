@@ -1,0 +1,33 @@
+\documentclass[a5paper,article]{memoir}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+\begin{document}
+
+
+Em 1985 Leslie Lamport criou o \LaTeX.
+Ele escreveu um pequeno manual em 1994 \cite{lamport94}.
+Ele certamente ouviu falar do
+livro de Darwin \cite{darwin}.
+
+%\bibliographystyle{alpha} % plain
+\begin{thebibliography}{9}
+
+\bibitem{darwin}
+  Charles Darwin.
+  \emph{A origem das espécies}
+  Editora inventada,
+  Muitos anos atrás.
+
+\bibitem{lamport94}
+  Leslie Lamport.
+  \emph{\LaTeX: a document preparation system},
+  Addison Wesley, Massachusetts,
+  2nd edition,
+  1994.
+  
+\end{thebibliography}
+\end{document}
