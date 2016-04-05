@@ -1,0 +1,182 @@
+\documentclass[a5paper,11pt,article,oneside]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{lmodern,microtype}
+\usepackage{tikz}
+
+\usepackage[colorlinks,%
+  linkcolor=black,%green!40!blue,%
+  citecolor=blue,%
+  urlcolor=red,%
+  pdfauthor={T\'assio Naia}%
+  ]{hyperref}
+
+% Redefinir estilo do título do sumário
+\renewcommand\printtoctitle[1]{}%\Large\bfseries#1}
+
+% redefinitions for chapter entries
+\renewcommand\chapternumberline[1]{}
+
+% nome do capítulo escrito grande
+\renewcommand\cftchapterfont{\large\scshape} 
+% número da página escrito grande e em itálico
+\renewcommand\cftchapterpagefont{\large \itshape\color{red!80!black}} 
+
+% Formatação de cada linha do sumário correspondendo a um capítulo
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Estamos definindo aqui o comando \l@mychap
+% 
+\makeatletter
+\newcommand\l@mychap[3]{%
+  \smallskip% pulo vertical
+  \par\noindent% novo parágrafo, sem indentação
+  \parbox{\dimexpr\textwidth-15pt\relax}{%
+    \cftchapterfont#1\quad {\cftchapterpagefont#2}%
+  }\par%
+}
+
+% Este é o comando que o memoir usa, escrevemos ele
+% de modo que use o comando \l@mychap acima.
+\renewcommand*\l@chapter[2]{%
+  \l@mychap{#1}{#2}{\chaptername}%
+}
+\makeatother
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\velhoEmph\emph
+\renewcommand{\emph}[1]{\textcolor{blue!80!black}{\velhoEmph{#1}}}
+
+% Margens %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\settypeblocksize{16cm}{10cm}{*}% vertical, horizontal
+
+\setlrmargins{*}{*}{1}
+\setulmargins{*}{*}{1}
+\checkandfixthelayout
+
+
+\begin{document}
+
+\hfill{\HUGE Um curso de \color{red!80!black}\LaTeX}
+\bigskip
+
+\tableofcontents*
+
+\hypersetup{linkcolor=red!90!black}
+
+\bigskip
+
+\chapter{Introdução}
+Aqui temos um exemplo de documento preparado usando \LaTeX.
+Ele é um \emph{pot-pourrit} das várias coisas que vamos abordar
+durante o curso. 
+
+Os documentos são produzidos em duas etapas, partindo do texto-fonte, 
+onde estão o~conteúdo do~texto (frases e parágrafos) e~também 
+as~instruções para sua~formatação.
+Essas instruções explicam ao ao~computador como formatar o~texto---são
+\emph{marcações} que indicando o~papel de cada trecho do texto. A grosso modo,
+isso nada mais é do que um jeito de dizer qual é a parte do texto que 
+corresponde a um título, uma tabela, uma imagem, etc.
+
+
+\chapter{Vantagens}
+
+\LaTeX\ é um sistema de tipografia sofisticado, que permite
+produzir documentos de grande qualidade tipográfica.
+Ele automatiza~a
+\begin{enumerate}
+\item divisão silábica;
+\item numeração de páginas, capítulos, tabelas, etc.;
+\item construção do índice, das listas de figuras e de tabelas;
+\item ordenação e formatação da bibliografia; e a
+\item formatação de equações.
+\end{enumerate}
+% estável
+O \LaTeX\ é um sistema \emph{robusto}. Você pode usá-lo com
+confiança para produzir documentos longos 
+(com centenas ou milhares de páginas\ldots\ o~\LaTeX\ não vai travar,
+ nem perder o seu texto!). 
+O programa também é \emph{estável}: seus documentos poderão ser lidos 
+daqui a~5, 
+10~ou 50~anos\footnote{Isso acontece por duas razões. O~conteúdo (texto-fonte)
+é armazenado no computador como texto puro (plain), que sempre será legível.
+A~segunda razão é que o~sistema de base do~\LaTeX, 
+chamado~\TeX, foi congelado. Ele nunca mais vai mudar! 
+Isso garante a~estabilidade. Por incrível que pareça, isso não significa que ele
+vai ficar para trás, já que é possível \emph{estender} 
+sua~funcionalidade.}.
+Existe ainda uma terceira vantagem, um pouco mais difícil de explicar.
+É bastante simples criar estilos de documento com o~\LaTeX.
+Isso nos permite reutilizar a~formatação dos documentos!%
+\footnote{A~vantagem é clara se pensamos em um conjunto de relatórios, 
+boletins edições de uma~revista, livros de uma mesma coleção, teses de uma 
+universidade, etc.}
+Essas são grandes vantagens, especialmente do~ponto de~vista 
+do~arquivamento de~textos e da produção
+de vários documentos com formatação similar. 
+Não é surpresa que este seja o padrão para vários setores da~publicação
+acadêmica!
+
+\chapter{Software livre}
+
+Talvez uma das maiores vantagens do~\LaTeX\ é que ele é
+\emph{software livre}. Isso significa que ele não aprisiona seus usuários:
+qualquer pessoa tem a~permissão de~``abrir o capô'' do programa 
+para ver como ele funciona, de~adaptá-lo às suas necessidades (o~que 
+inclui corrigir falhas que encontrar) e redistribuir o programa (com ou sem
+as modificações) para que outras pessoas beneficiem dele. Essas são
+as 4~liberdades de um software livre:
+
+
+\begin{description}
+\item[\small Liberdade 0.] Executar o programa com qualquer propósito;
+\item[\small Liberdade 1.] Estudar o programa;
+\item[\small Liberdade 2.] Redistribuir cópias do programa de modo que você possa ajudar ao seu próximo; e
+\item[\small Liberdade 3.] Modificar o programa e distribuir estas modificações, de modo que toda a comunidade se beneficie.
+\end{description}
+A Fundação do Software Livre (FSF, veja Figura~\ref{fig:logo-fsf})
+há mais de 30 anos discute e fomenta a~produção
+de~software livre. Ela é uma grande representante desse movimento,
+defendendo liberdade e~democracia nos meios digitais.
+O PoliGNU, que está oferecendo este curso, é um grupo de estudo 
+e discussão de software e cultura livres.
+
+\begin{figure}
+\centering
+\includegraphics[width=3cm]{FSF_logo_menor}%
+\caption{Logotipo da Fundação do Software Livre.}\label{fig:logo-fsf}
+\end{figure}
+
+\chapter{Conteúdo do curso}
+
+Ao fim do curso teremos trabalhado com os
+elementos básicos de um texto.
+
+\begin{itemize}
+\item formatação do texto;
+\item formatação da página;
+\item tabelas e figuras;
+\item expressões matemáticas; e
+\item referências bibliográficas.
+\end{itemize}
+
+%% \begin{itemize}
+%% \item índce
+%% \item nota de rodapé
+%% \item figura
+%% \item tabela
+%% \item expressão matemática
+%% \end{itemize}
+
+%% \begin{itemize}
+%% \item relatório (referências bibliográficas)
+%% \item formulário (estilo carta com assinatura)
+%% \item tufte-style (notas de aula)
+%% \item slides
+%% \item diagrama com tikz
+%% \item chemfig
+%% \item tese
+%% \end{itemize}
+
+\end{document}
