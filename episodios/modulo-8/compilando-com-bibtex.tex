@@ -1,0 +1,131 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\setbeamertemplate{navigation symbols}{}% remove navigation symbols
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+
+\tikzset{
+    base/.style={
+        very thick, 
+        inner sep=5pt,
+        %rounded corners,
+        minimum size = .6cm
+    },
+    pdflatex/.style={
+        base,
+        minimum width = 2.2cm,
+        fill=green!30!white, 
+    },
+    bibtex/.style={
+        base,
+        minimum width = 2.2cm,
+        fill=orange!50!white
+    },
+    input/.style={
+        base,
+        fill=blue!30!white,
+    },
+    output/.style={
+        base,
+        %color=white,
+        fill=red!30!white
+    },
+    aaa/.style={
+        base,
+        %color=white,
+        fill=gray!30!white
+    },
+    final/.style={
+        base,
+        %draw=red!50!black,
+        fill=red!30!white,
+        %text=white,
+    },
+    go/.style={
+        very thick, 
+        ->, 
+        rounded corners,
+        shorten >=2pt,
+        shorten <=2pt
+    }
+}
+
+\def\pdflatex/{\texttt{pdflatex}}
+\def\bibtex/{\texttt{bibtex}}
+
+\begin{document}
+
+    \begin{frame}
+        \begin{figure}
+            \centering
+            \begin{tikzpicture}
+                \matrix(m)[
+                    ampersand replacement=\&,
+                    matrix of nodes, 
+                    nodes in empty cells,
+                    % nodes={minimum width=15mm, minimum height=5mm},
+                    column sep=20mm, 
+                    row sep=.93cm
+                ]{ % | tex | bib | command | output | final |
+                           \&    \&        \&       \&      \\ %01
+                           \&    \&        \&       \&      \\ %02
+                           \&    \&        \&       \&      \\ %03
+                           \&    \&        \&       \&      \\ %04 
+                           \&    \&        \&       \&      \\ %05
+                           \&    \&        \&       \&      \\ %06
+                           \&    \&        \&       \&      \\ %07
+                           \&    \&        \&       \&      \\ %08
+                }; 
+                
+                \node(tex)[input]at(m-1-1){.tex};
+
+                \node(1st)[pdflatex]at(m-1-3){\pdflatex/};
+                \node[output](1st pdf)at(m-1-4){.pdf};
+                \node[output,aaa](1st aux)at(m-2-3){.aux};
+
+                \draw[go] (tex) to (1st);
+                \draw[go] (1st) to (1st pdf);
+                \draw[go] (1st) to (1st aux);
+
+                \pause
+                
+                \node(bib)[input]at(m-3-2){.bib};
+               
+                \node(2nd)[bibtex]at(m-3-3){\bibtex/};
+                \node[output,aaa](2nd blg)at(m-3-4){.blg};
+                \node[output,aaa](2nd bbl)at(m-4-3){.bbl};
+                
+                \draw[go] (1st aux) to (2nd);
+                \draw[go] (bib) to (2nd);
+                \draw[go] (2nd) to (2nd blg);
+                \draw[go] (2nd) to (2nd bbl);
+                
+                \pause
+                
+                \node(3rd)[pdflatex]at(m-5-3){\pdflatex/};
+                \node[output](3rd pdf)at(m-5-4){.pdf};
+                \node[output,aaa](3rd aux)at(m-6-3){.aux};
+
+                \draw[go] (2nd bbl) to (3rd);
+                \draw[go] (tex) to[out=270, in=180] (3rd);
+                \draw[go] (3rd) to (3rd pdf);
+                \draw[go] (3rd) to (3rd aux);
+                
+                \pause
+                
+                \node(4th)[pdflatex]at(m-7-3){\pdflatex/};
+                \node[final](4th pdf)at(m-7-5){.pdf};
+                \node[output,aaa](4th aux)at(m-8-3){.aux};
+
+                \draw[go] (3rd aux) to (4th);
+                \draw[go] (tex) to[out=270, in=180] (4th);
+                \draw[go] (4th) to (4th pdf);
+                \draw[go] (4th) to (4th aux);
+            \end{tikzpicture}
+        \end{figure}
+    \end{frame}
+    
+\end{document}
