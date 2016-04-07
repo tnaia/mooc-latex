@@ -4,7 +4,7 @@
 \usepackage[brazil]{babel}
 \usepackage{lmodern,microtype}
 \usepackage{tikz}
-
+\usepackage{amsmath}
 \usepackage[colorlinks,%
   linkcolor=black,%green!40!blue,%
   citecolor=blue,%
@@ -27,11 +27,13 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Estamos definindo aqui o comando \l@mychap
 % 
+\newlength{\comprimento}
+\settowidth{\comprimento}{\quad{\cftchapterpagefont10}}
 \makeatletter
 \newcommand\l@mychap[3]{%
   \smallskip% pulo vertical
   \par\noindent% novo parágrafo, sem indentação
-  \parbox{\dimexpr\textwidth-15pt\relax}{%
+  \parbox{\dimexpr.5\textwidth+\comprimento\relax}{%
     \cftchapterfont#1\quad {\cftchapterpagefont#2}%
   }\par%
 }
@@ -48,7 +50,7 @@
 \renewcommand{\emph}[1]{\textcolor{blue!80!black}{\velhoEmph{#1}}}
 
 % Margens %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\settypeblocksize{16cm}{10cm}{*}% vertical, horizontal
+\settypeblocksize{17cm}{10cm}{*}% vertical, horizontal
 
 \setlrmargins{*}{*}{1}
 \setulmargins{*}{*}{1}
@@ -148,6 +150,16 @@ e discussão de software e cultura livres.
 \caption{Logotipo da Fundação do Software Livre.}\label{fig:logo-fsf}
 \end{figure}
 
+\chapter{Belas equações}
+
+Os recursos para formatar expressões matemáticas no \LaTeX\ são lendários.
+Aqui estão alguns exemplos.
+\begin{align*}
+1 + e^{i\pi}& =0 
+& \sum_{n=1}^\infty \frac{1}{n^s} &= \prod_p\Bigl(1-\frac{1}{p^s}\Bigr)^{-1}\\
+\int_{-\infty}^\infty \!\mathrm{e}^{-x^2}\,\mathrm{d}x &=\sqrt{\pi} &
+\nabla \times\mathbf{B}&=\mu_0\Bigl(\mathbf{J}+\varepsilon_0\frac{\partial\mathbf{E}}{\partial t}\Bigr)
+\end{align*}
 \chapter{Conteúdo do curso}
 
 Ao fim do curso teremos trabalhado com os

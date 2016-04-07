@@ -35,7 +35,8 @@ Os dois primeiros módulos são liberados na primeira semana.
 
 ## Módulo 0 &mdash; Boas vindas e introdução
 - [ ] o que é, o que é? (show de exemplos, o que vamos cobrir no curso)
-- [ ] como usar a plataforma do MOOC (onde estão os vídeos, o fórum, como participar, perguntas e tarefas) 
+- [ ] como usar a plataforma do MOOC (onde estão os vídeos, o fórum,
+ como participar, perguntas e tarefas) 
 - [ ] quem somos nós (PoliGNU, apresentação das pessoas)
 - [ ] história e contexto (Knuth, por que o LaTeX é de graça)
 - [ ] como faz? (instalação, editores de texto)
@@ -43,28 +44,38 @@ Os dois primeiros módulos são liberados na primeira semana.
 ## Módulo 1 &mdash; Arroz com feijão
 - [ ] texto puro! (marcação semântica, qual é a diferença?)
 - [ ] produzindo um documento (partes do documento, compilação)
-- [ ] os programas que vamos usar no curso (pdflatex, bibtex para bibliografia) 
-- [ ] os arquivos produzidos (e pra quê servem) #mencionar que mais de uma etapa de compilação pode ser necessária
-- [ ] onde buscar ajuda? (lshort, wikibooks, comunidade, tex.stackexchange, OSQA para o MOOC?)
+- [ ] os programas que vamos usar no curso (pdflatex, bibtex) 
+- [ ] os arquivos produzidos (e pra quê servem)
+ falar que mais de uma etapa de compilação pode ser necessária
+- [ ] onde buscar ajuda? (lshort, wikibooks, comunidade,
+ tex.stackexchange, OSQA para o MOOC?)
 - [ ] Erros comuns (confundir editor e compilador) 
 - [ ] Tarefa e Desafio
 
 ## Módulo 2 &mdash; Escrevendo texto
-- [ ] Sintaxe (texto versus comandos, cabeçalho do documento, pacotes, parâmetros)
-- [ ] Pontuação, espaços (comando espaço e espaços inquebráveis), apóstrofo, traços (-, --,---). 
+- [ ] Sintaxe (texto versus comandos, cabeçalho do documento,
+ pacotes, parâmetros)
+- [ ] Pontuação, espaços (comando espaço e espaços inquebráveis),
+ apóstrofo, traços (-, --,---). 
 - [ ] Caracteres especiais
-- [ ] Quebra de linha, novo parágrafo e nova página, (par, newline, noindent, newpage).
+- [ ] Quebra de linha, novo parágrafo e nova página, (par, newline,
+ noindent, newpage).
 - [ ] Hifenação
 - [ ] Erros comuns
 - [ ] Tarefa e Desafio
 
 ## Módulo 3 &mdash; Formatando Texto
-- [ ] Ambientes (centralizado, alinhado, à esquerda, quote, quotation, etc.) #enfatizar que begin e end são comandos
-- [ ] Mais ambientes (itemize, enumerate,description) # items com parâmetro opcional em description, enumerate tem parâmetro opcional também
+- [ ] Ambientes (centralizado, alinhado, à esquerda, quote, quotation, etc.)
+ destacar que begin e end são comandos
+- [ ] Mais ambientes (itemize, enumerate,description)
+ items com parâmetro opcional em description, enumerate tem parâmetro
+ opcional também
 - [ ] Nota de rodapé e nota marginal (footnote, agrupamentos)
 - [ ] Novos comandos (abreviações)
-- [ ] Formatação básica (ênfase, negrito, sem serifa, versalete) #retomar agrupamentos
-- [ ] Formatação básica (normalsize, large, Large, huge small, tiny, footnotesize) #retomar agrupamentos
+- [ ] Formatação básica (ênfase, negrito, sem serifa, versalete)
+ retomar agrupamentos
+- [ ] Formatação básica (normalsize, large, Large, huge small,
+ tiny, footnotesize) #retomar agrupamentos
 - [ ] Comandos com parâmetros (exemplo: comentários destacados usando cores!)
 - [ ] Erros comuns
 - [ ] Tarefa e Desafio
@@ -137,11 +148,37 @@ Os dois primeiros módulos são liberados na primeira semana.
 - gráficos (pgfplots)
 - natbib
 
+Lembretes
+---------
+
+- [ ] Questionário na inscrição
+ - você já usou LaTeX?
+ - você conhece software livre?
+ - qual a sua área de atuação
+- [ ] Fazer um questionário ao fim do curso
+ - quais as duas melhores coisas do curso?
+ - e as duas piores?
+ - o que você mais gostou de fazer?
+ - o que não funcionou bem?
+ - o que poderia ter sido melhor
+ - o que você gostaria de aprender mas não foi coberto?
+ - que outros cursos você gostaria que fossem oferecidos?
+ - qual a sua opinião sobre software livre? (marque os que se aplicam)
+  - [ ] prefiro não usar
+  - [ ] indiferente
+  - [ ] gostei, interessante
+  - [ ] estou recomendando para outras pessoas
+  - [ ] é a minha primeira escolha
+
 Notas
 -----
 
 O material na pasta `aulas-anteriores` está sendo reorganizado,
 e os arquivos devem mudar para alguma pasta em breve.
+
+Agradecimentos
+--------------
+
 
 Licença
 -------
@@ -161,3 +198,4 @@ Este repositório costumava ser guardado em
 
     git@gitorious.org:material-latex-mooc-polignu/material-latex-mooc-polignu.git (fetch)
     git@gitorious.org:material-latex-mooc-polignu/material-latex-mooc-polignu.git (push)originorigin
+
