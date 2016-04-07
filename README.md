@@ -26,8 +26,6 @@ Próximos passos
 Roteiro para video-aulas
 ------------------------
 
-Tássio está escrevendo este roteiro para o curso do MOOC.
-
 O curso terá entre um mês e meio e dois meses,
 com ~1h30 de vídeo por semana.
 
@@ -178,6 +176,23 @@ e os arquivos devem mudar para alguma pasta em breve.
 
 Agradecimentos
 --------------
+
+O curso de LaTeX do PoliGNU (em suas diversas encarnações) não teria
+sido possível sem a dedicação de várias pessoas.
+
+
+- Darnerson Pereira de Sousa
+- Diego Rabatone de Oliveira
+- Felipe Pait
+- Haydée Svab
+- Moisés Medeiros de Oliveira
+- Rodrigo Rodrigues da Silva
+- Shayenne da Luz Moura
+- Tássio Naia
+- Thiago "tecepe" Costa de Paiva
+- Vitor Matosinho Martins
+
+Se o seu nome está faltando na lista, escreva para a gente!
 
 
 Licença
