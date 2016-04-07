@@ -34,7 +34,7 @@ com ~1h30 de vídeo por semana.
 Os dois primeiros módulos são liberados na primeira semana.
 
 ## Módulo 0 &mdash; Boas vindas e introdução
-- [ ] o que é, o que é? (show de exemplos)
+- [ ] o que é, o que é? (show de exemplos, o que vamos cobrir no curso)
 - [ ] como usar a plataforma do MOOC (onde estão os vídeos, o fórum, como participar, perguntas e tarefas) 
 - [ ] quem somos nós (PoliGNU, apresentação das pessoas)
 - [ ] história e contexto (Knuth, por que o LaTeX é de graça)

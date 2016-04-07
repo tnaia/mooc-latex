@@ -19,3 +19,4 @@ Imagem de Martin Dickopp      - sistema   (archlinux, dwm)
 			         - evince        (ver pdf) 
 			       
                               
+
