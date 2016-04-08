@@ -1,0 +1,16 @@
+
+       .= .-_-. =.    	
+      ((_/)o o(\_))       .─┐                         ╦
+       `-'(. .)`-'      ╦ ├─┤╔╦═══╗ ╦   ╔╦╗╔═╗╔═╗╔═╗  ║ 
+        /| \_/ |\       ║ ┴ ┴ ║┌─┐╚╦╝  	║║║║ ║║ ║║    ║
+       ( | GNU | )      ╩═╝   ╩├┤ ╔╩╗  	╩ ╩╚═╝╚═╝╚═╝  o  
+       /"\_____/"\             └─┘╝ ╚
+       \__)   (__/      
+  >> GNU é Liberdade! <<      Vídeo-aula           m-0 v-1
+			      				    
+Imagem de Martin Dickopp      - um pouco de história
+      Copyright 2004          - TeX e LaTeX
+                              - marcação de significado
+			       
+                              
+
