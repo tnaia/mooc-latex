@@ -1,0 +1,121 @@
+%todo: foto knuth e lamport
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{tikz}
+\usepackage{url}
+\newcommand{\figura}[2]{%
+  \tikz[baseline={(0,0)}]
+  \node at (0,0) {\includegraphics[width=#1]{#2}};}
+
+\newcommand{\site}[2]{%
+  \parbox{#1}{\centering\url{#2}}}
+
+\setbeamertemplate{navigation symbols}{}% remove navigation symbols
+
+\begin{document}
+
+\begin{frame}{Knuth e \TeX}
+
+\begin{center}
+\Large Tipografia para a era digital \pause (1978!!)
+\end{center}
+
+\pause
+
+\bigskip
+
+\begin{itemize}
+\item linguagem para formatação de textos (\TeX),
+\item programa (software) sofisticado
+\item libertou os programas -- \TeX\ é \alert{Software Livre}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Lamport e o \LaTeX}
+
+Desvantagem do \TeX: tipografia é difícil!
+
+\pause\medskip
+
+Lamport construiu o \LaTeX\ (usando o \TeX)\hfill{\small\textcolor{gray}{1985}}
+
+\pause\bigskip
+
+\begin{itemize}
+\item mais fácil usar que o \TeX
+\item vários estilos predefinidos 
+\item também é \alert{Software livre}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Software Livre}
+
+\begin{center}
+Programas que respeitam quem usa.
+
+
+\pause\bigskip
+
+\end{center}
+
+
+\alert{4 Liberdades do software livre}:
+
+\pause\medskip
+
+\begin{description}
+\item[\small Liberdade 0.] \alert{Executar} o programa com qualquer propósito;\pause
+\item[\small Liberdade 1.] \alert{Estudar} o programa;\pause
+\item[\small Liberdade 2.] \alert{Redistribuir} cópias do programa de modo que você possa ajudar ao seu próximo; e\pause
+\item[\small Liberdade 3.] \alert{Melhorar} o programa e distribuir estas modificações, de modo que toda a comunidade se beneficie.
+\end{description}
+
+\pause
+\begin{center}
+Livre nem sempre é gratuito.
+\end{center}
+\end{frame}
+
+\begin{frame}{Software Livre por toda parte}
+
+  \begin{center}
+    \Large Estamos rodeados de software livre
+  \end{center}
+
+\pause\bigskip
+
+\begin{itemize}[<+->]
+\item GNU/Linux --- sistemas operacionais livres (ex: ubuntu, triskel, archlinux)
+\item Firefox --- navegador livre
+\item Blender --- modelagem e animação 3D
+\item MediaWiki --- software usado na Wikipédia
+\end{itemize}
+\end{frame}
+
+\begin{frame}{FSF, CCSL e PoliGNU}
+
+\begin{center}
+\Large Software \alert{livre} por um mundo \alert{melhor}.
+\end{center}
+
+\pause
+
+\hfill\hfill\figura{2.6cm}{FSF_logo_menor.jpg}
+\pause\hfill\figura{3.2cm}{ime-usp-ccsl.png}
+\pause\hfill\figura{3.2cm}{polignu.png}
+\hfill\hfill
+
+
+\pause
+
+\hfill\hfill\site{2.6cm}{fsf.org}
+\hfill\site{3.2cm}{ccsl.ime.usp.br}
+\hfill\site{3.2cm}{polignu.org}
+\hfill\hfill
+
+
+\end{frame}
+
+\end{document}
