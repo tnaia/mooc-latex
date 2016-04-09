@@ -4,19 +4,64 @@ O foco aqui é introduzir o LaTeX, a plataforma EdX e o PoliGNU, e
 explicar como instalar os programas necessários para acompanhar o
 curso.
 
-## O que é, o que é
+## 0 - Infra-estrutura
 
+Um vídeo para demonstrar o setup dos screencasts.
+
+As gravações são feitas num computador rodando Archlinux.
+Uso `recordmydesktop` para capturar a tela e o áudio.
+Além disso, uso `compton` e `screenkey` para exibir
+as teclas que são pressionadas, numa camada semi-transparente
+sobre a tela. Escolho uma resolução de tela baixa usando
+xrandr.
+
+Para editar o texto vou usar o `Texmaker`.
+A sugestão para quem acompanha o curso é usar `Texmaker`. 
+Uso `evince` para ver arquivos `pdf`.
+
+
+## 1 - O que é, o que é
+
+- o que é
+  - sistema de tipografia mais sofisticado que existe
+  - divisão silábica
+  - numeração automática de páginas, capítulos, tabelas etc
+  - ordenação e formatação automática da bibliografia
+  - excelente qualidade tipográfica
+  - equações lindas
+  - estável
+  - software livre
 - exemplos de coisas que dá para fazer com o LaTeX
-- o que você vai aprender no curso
+  - índce
+  - nota de rodapé
+  - figura
+  - tabela
+  - matemática
+  - gráficos com pgfplots
+  - código fonte
+  - algoritmo    
+  - relatório (referências bibliográficas)
+  - formulário (estilo carta com assinatura)
+  - tufte-style (notas de aula)
+  - slides
+  - pôsteres
+  - diagrama com tikz
+  - chemfig
+  - tese
+- o que você pode aprender com o curso
+  - formatação básica do texto e da página
+  - tabelas e figuras
+  - expressões matemáticas
+  - montar referências bibliográficas
 
-## Como funciona o curso?
+## 2 - Como funciona o curso?
 
 - o que é um MOOC
 - uma parte importante são vocês!
 - como funciona o site (material, perguntas, tarefas, fórum)
 - o que vai acontecer cada semana (vídeo-aula, quiz, tarefa, interação nos fórums)
 
-## Apresentando o time
+## 3 - Apresentando o time
 
 - este curso é oferecido por voluntários
 - organizado pelo PoliGNU
@@ -26,13 +71,15 @@ curso.
 - apresentação dos participantes
 - vamos estar nos fórums, ajudando vocês
 
-## História e contexto
+## 4 - História e contexto
 
 - A história do LaTeX começa com Knuth e o TeX
 - documentos belos, belas expressões matemáticas: foco nas possibilidades
+- o software é livre (SL)
 - Lamport faz LaTeX usando TeX: simples e com marcação de significado
+- um pouco mais sobre SL: as quatro liberdades, a livre versus gratuito
 
-## Usando o LaTeX
+## 5 - Usando o LaTeX
 
 - são só dois ingredientes
 - distribuição LaTeX (MikTeX ou TeXlive)
