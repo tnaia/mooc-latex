@@ -13,6 +13,8 @@ Módulo 0
 
 - `slides-m0-v4.tex` história e contexto
 
+- `FSF_logo_menor.jpg` is an image from the [Free Software Foundation](fsf.org)
+  used here for educational purposes only.
 
 - `Lamport.jpg` is an image from [tagesspiegel](tagesspiegel.de)
   used here for educational purposes only.
