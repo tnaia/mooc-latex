@@ -185,6 +185,7 @@ sido possível sem a dedicação de várias pessoas.
 - Diego Rabatone de Oliveira
 - Felipe Pait
 - Haydée Svab
+- Leonardo Alexandre Ferreira Leite
 - Michelle Sena
 - Moisés Medeiros de Oliveira
 - Rodrigo Rodrigues da Silva
