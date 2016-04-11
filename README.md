@@ -36,11 +36,11 @@ Os dois primeiros módulos são liberados na primeira semana.
 2. [ ] como usar a plataforma do MOOC (onde estão os vídeos, o fórum,
  como participar, perguntas e tarefas) 
 3. [ ] quem somos nós (PoliGNU, apresentação das pessoas)
-4. [x] história e contexto (Knuth, por que o LaTeX é de graça)
+4. [x] [história e contexto (Knuth, por que o LaTeX é de graça)](https://youtu.be/FEz0qYls9SI?list=PLUOUidAXN8Ob28rdtr0awBEHv3lvCtKGp)
 5. [ ] como faz? (instalação, editores de texto)
 
 ## Módulo 1 &mdash; Arroz com feijão
-1. [ ] texto puro! (marcação semântica, qual é a diferença?)
+1. [x] [texto puro! (marcação semântica, qual é a diferença?)](https://youtu.be/buBmazofm3s)
 2. [ ] produzindo um documento (partes do documento, compilação)
 3. [ ] os programas que vamos usar no curso (pdflatex, bibtex) 
 4. [ ] os arquivos produzidos (e pra quê servem)

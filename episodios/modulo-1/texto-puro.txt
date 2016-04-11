@@ -1,15 +1,8 @@
-\documentclass[a4paper,article]{memoir}
+Fábulas
+Esopo
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[brazil]{babel}
+O Lobo e o Cordeiro
 
-\usepackage{lmodern,microtype}
-
-\begin{document}
-
-
-\chapter{O Lobo e o Cordeiro}
 
 Estava bebendo um Lobo encarniçado à beira de um riacho, e pela parte
 debaixo chegou um Cordeiro, também a beber. Olhou-o o Lobo de má cara,
@@ -24,14 +17,15 @@ disse o Cordeiro, porque ainda não tenho dentes. O Lobo, sem mais
 razões, saltou sobre ele, e logo o degolou e comeu.
 
 
-\section{Moralidade}
+Moralidade
 
 Mostra esta Fábula que nenhuma justiça, nem razões valem ao inocente,
 para o livrarem das mãos do inimigo poderoso e desalmado. Poucas
 cidades ou vilas há onde não haja estes Lobos, que sem causa nem
 razão, matam ao pobre e chupam-lhe o sangue.
 
-\chapter{O Leão e o Rato}
+
+O Leão e o Rato
 
 Estando o Leão dormindo, andavam uns ratos brincando ao redor dele, e
 saltando-lhe por cima o acordaram. Tomou ele um entre as patas estava
@@ -41,7 +35,7 @@ forças. Sabendo-o o Rato, tal diligêcia pôs, que roeu brevemente os
 laços e cordéis, e soltou o Leão que se foi livre em pago da boa obra
 que lhe fez.
 
-\section{Moralidade}
+Moralidade
 
 Duas coisas temos aqui que notar: primeiramente o agradecimento que se
 deve a qualquer boa obra, e em especial a quem perdoa algum agravo,
@@ -49,4 +43,3 @@ podendo vingar-se como este Leão podia. Secundariamente, quanto devem
 os poderosos estimar a amizade de qualquer homem, por fraco que seja;
 porque qualquer pode fazer mal, e se não podem fazer mal, todos podem
 fazer bem.
-\end{document}
