@@ -16,7 +16,7 @@ do material está em uma pasta.
 Próximos passos
 ---------------
 
-1. [ ] [episódios-piloto](https://www.youtube.com/channel/UCO04uZ19vbFrNNFAW5G1mrw)
+1. [ ] [episódios-piloto](https://www.youtube.com/watch?v=J3R6HR0scCM&list=PLUOUidAXN8Oa8F81TKxJhVnDCIdHe9uhO)
 2. [ ] gravar/editar os vídeos (versão final)
 3. [ ] polir o material didático
 4. [ ] bolar as questões, tarefas e desafios
@@ -41,8 +41,8 @@ Os dois primeiros módulos são liberados na primeira semana.
 
 ## Módulo 1 &mdash; Arroz com feijão
 1. [x] [texto puro! (marcação semântica, qual é a diferença?)](https://youtu.be/buBmazofm3s)
-2. [ ] produzindo um documento (partes do documento, compilação)
-3. [ ] os programas que vamos usar no curso (pdflatex, bibtex) 
+2. [x] [produzindo um documento (texmaker, partes do documento, compilação)](https://youtu.be/ZEEpMzfLF1c)
+3. [ ] os programas que vamos usar no curso (texmaker, pdflatex, bibtex) 
 4. [ ] os arquivos produzidos (e pra quê servem)
  falar que mais de uma etapa de compilação pode ser necessária
 5. [ ] onde buscar ajuda? (lshort, wikibooks, comunidade,

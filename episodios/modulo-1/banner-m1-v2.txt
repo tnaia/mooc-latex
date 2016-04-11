@@ -1,0 +1,15 @@
+
+       .= .-_-. =.    	
+      ((_/)o o(\_))       .─┐                         ╦
+       `-'(. .)`-'      ╦ ├─┤╔╦═══╗ ╦   ╔╦╗╔═╗╔═╗╔═╗  ║ 
+        /| \_/ |\       ║ ┴ ┴ ║┌─┐╚╦╝  	║║║║ ║║ ║║    ║
+       ( | GNU | )      ╩═╝   ╩├┤ ╔╩╗  	╩ ╩╚═╝╚═╝╚═╝  o  
+       /"\_____/"\             └─┘╝ ╚
+       \__)   (__/      
+  >> GNU é Liberdade! <<      Vídeo-aula            m-1 v-2
+			      				    
+Imagem de Martin Dickopp      - produzindo um documento
+      Copyright 2004          - texto fonte   (texto-puro)
+                              - compilação   (processamento)
+
+                              
