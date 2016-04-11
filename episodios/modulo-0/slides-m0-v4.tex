@@ -9,6 +9,7 @@
   \tikz[baseline={(0,0)}]
   \node at (0,0) {\includegraphics[width=#1]{#2}};}
 
+\newcommand{\nota}[1]{\bigskip\hfill{\color{gray}\footnotesize#1}}
 \newcommand{\site}[2]{%
   \parbox{#1}{\centering\url{#2}}}
 
@@ -20,37 +21,43 @@
 
 \begin{center}
   \figura{2cm}{1998_donald_knuth}\quad
-  \Large Tipografia para a era digital \pause
-  \hfill{\small\textcolor{red!80!black}{1978!!}}
+  \Large Tipografia para a era digital 
+  \hfill\uncover<2->{\small\textcolor{red!80!black}{1978!!}}
 \end{center}
-
-\pause
 
 \bigskip
 
+\uncover<3->{
 \begin{itemize}
 \item linguagem para formatação de textos (\TeX),
 \item programa (software) sofisticado
 \item libertou os programas -- \TeX\ é \alert{Software Livre}
 \end{itemize}
+}
+
+\uncover<1->{\nota{Foto: Computer History Museum}}
 \end{frame}
 
 \begin{frame}{Leslie Lamport e o \LaTeX}
 
 Desvantagem do \TeX: tipografia é difícil!
 
-\pause\medskip
+\medskip
 
-\figura{3cm}{leslie-lamport_vignette}\quad
+\uncover<2->{
+  \figura{1.8cm}{Lamport}\quad
 Lamport fez o \LaTeX\ (usando o \TeX)\hfill{\small\textcolor{red!80!black}{1985}}
-
+}
 \pause\bigskip
 
+\uncover<3->{
 \begin{itemize}
 \item mais fácil usar que o \TeX
 \item vários estilos predefinidos 
 \item também é \alert{Software livre}
 \end{itemize}
+}
+\uncover<2->{\nota{Foto: \url{tagesspiegel.de}}}
 \end{frame}
 
 \begin{frame}{Software Livre}

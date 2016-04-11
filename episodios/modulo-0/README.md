@@ -13,3 +13,10 @@ Módulo 0
 
 - `slides-m0-v4.tex` história e contexto
 
+
+- `Lamport.jpg` is an image from [tagesspiegel](tagesspiegel.de)
+  used here for educational purposes only.
+  
+- `1998_donald_knuth.jpg` is an image from the 
+  [Computer History Museum](www.computerhistory.org)
+  used here with educational purposes only.
