@@ -1,0 +1,51 @@
+% Exemplo baseado na resposta de Lars Madsen (daleif)
+% http://tex.stackexchange.com/questions/19575/how-to-set-two-types-of-appendixes-on-memoir-class/19581#19581
+\documentclass{memoir}
+\usepackage[brazil]{babel}
+
+% Texto que vai no índice.
+% Produz entradas do tipo ``Anexo (lalilu) C ''
+%
+% O comando \cftinsertcode{XXX}{codigo}
+% associa um certo texto ``codigo'' a um
+% rótulo ``XXX''. Isso é usado
+% junto com \cftinserthooc para inserir um
+% comando no arquivo que têm o conteúdo do
+% índice (ou algum outro arquivo auxiliar).
+\cftinsertcode{BBB}{%
+  \renewcommand*{\cftappendixname}{%
+    Anexo (lalilu)\space}}
+
+\begin{document}
+
+\tableofcontents
+
+\chapter{Introducao}
+\chapter{Mais um capitulo}
+
+\appendix
+
+\chapter{Um apendice}
+\chapter{Outro apendice}
+\chapter{Terceiro anexo}
+
+% Anexos
+% ------
+%
+% O comando \cftinserthooc{toc}{XXX}
+% insere no arquivo auxiliar do índice
+% o código que têm rótulo XXX (veja
+% comando \cftinsertcode{XXX}{codigo}
+%
+%
+% Remova o comentário da linha para reiniciar
+% a contagem (Anexo A, Anexo B, etc
+% em vez de Anexo C, Anexo D).
+%\appendix
+\cftinserthook{toc}{BBB}
+\renewcommand{\appendixname}{Anexo}
+
+\chapter{Primeiro anexo}
+\chapter{Outro Anexo}
+
+\end{document}
