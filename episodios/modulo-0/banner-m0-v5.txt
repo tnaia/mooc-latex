@@ -1,0 +1,16 @@
+
+       .= .-_-. =.    	
+      ((_/)o o(\_))       .─┐                         ╦
+       `-'(. .)`-'      ╦ ├─┤╔╦═══╗ ╦   ╔╦╗╔═╗╔═╗╔═╗  ║ 
+        /| \_/ |\       ║ ┴ ┴ ║┌─┐╚╦╝  	║║║║ ║║ ║║    ║
+       ( | GNU | )      ╩═╝   ╩├┤ ╔╩╗  	╩ ╩╚═╝╚═╝╚═╝  o  
+       /"\_____/"\             └─┘╝ ╚
+       \__)   (__/      
+  >> GNU é Liberdade! <<      Vídeo-aula            m-0 v-5
+			      				    
+Imagem de Martin Dickopp      - Programas que vamos usar:
+      Copyright 2004          - pdflatex e bibtex
+                                         (TeXlive ou proTeXt)
+                              - texmaker ou TeXStudio
+
+                              
