@@ -37,7 +37,7 @@ Os dois primeiros módulos são liberados na primeira semana.
  como participar, perguntas e tarefas) 
 3. [ ] quem somos nós (PoliGNU, apresentação das pessoas)
 4. [x] [história e contexto (Knuth, por que o LaTeX é de graça)](https://youtu.be/FEz0qYls9SI?list=PLUOUidAXN8Ob28rdtr0awBEHv3lvCtKGp)
-5. [x] como faz? (instalação, editores de texto)
+5. [x] [programas necessários e instalação (latex + editores de texto)](https://youtu.be/TRnagZ39fJk)
 
 ## Módulo 1 &mdash; Arroz com feijão
 1. [x] [texto puro! (marcação semântica, qual é a diferença?)](https://youtu.be/buBmazofm3s)
