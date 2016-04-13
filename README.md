@@ -49,10 +49,11 @@ Os dois primeiros módulos são liberados na primeira semana.
 1. [x] [texto puro! (marcação semântica, qual é a diferença?)](https://youtu.be/buBmazofm3s)
 2. [x] [produzindo um documento (texmaker, partes do documento, compilação)](https://youtu.be/ZEEpMzfLF1c)
 3. [x] [Partes do documento e sintaxe (cabeçalho e corpo do texto, comandos e agrupamento)](https://youtu.be/Qx9m99qyrR0)
-4. [ ] Comandos, parâmetros (argumentos) e pacotes
-4. [ ] onde buscar ajuda? (lshort, wikibooks, comunidade,
+4. [ ] Comandos, parâmetros (argumentos)
+5. [ ] Incluindo Pacotes
+6. [ ] onde buscar ajuda? (lshort, wikibooks, comunidade,
  tex.stackexchange, OSQA para o MOOC?)
-5. [ ] Erros comuns (confundir editor e compilador) 
+7. [ ] Atenção (confundir editor e compilador) 
 
 ### Tarefa e Desafio
 
@@ -67,7 +68,7 @@ Os dois primeiros módulos são liberados na primeira semana.
 4. [ ] Hifenação
 5. [ ] os arquivos produzidos (e pra quê servem)
  falar que mais de uma etapa de compilação pode ser necessária
-6. [ ] Erros comuns
+6. [ ] Atenção
 7. [ ] Tarefa e Desafio
 
 ## Módulo 3 &mdash; Formatando Texto
@@ -83,7 +84,7 @@ Os dois primeiros módulos são liberados na primeira semana.
 6. [ ] Formatação básica (normalsize, large, Large, huge small,
  tiny, footnotesize) #retomar agrupamentos
 7. [ ] Comandos com parâmetros (exemplo: comentários destacados usando cores!)
-8. [ ] Erros comuns
+8. [ ] Atenção
 9. [ ] Tarefa e Desafio
 
 ## Módulo 4 &mdash; Seções, Figuras, Tabelas, Rótulos e numerações
@@ -93,7 +94,7 @@ Os dois primeiros módulos são liberados na primeira semana.
 4. [ ] Tabelas (linhas verticais e horizontais, separadores de colunas)
 5. [ ] Tabelas(multirow e multicol)
 6. [ ] Pacote útil: hyperref
-7. [ ] Erros comuns
+7. [ ] Atenção
 8. [ ] Tarefa e Desafio
 
 ## Módulo 5 &mdash; Mais formatação de texto, espaçamento e contadores
@@ -103,7 +104,7 @@ Os dois primeiros módulos são liberados na primeira semana.
 4. [ ] Novos ambientes
 5. [ ] Contadores (newcounter, stepcounter, refstepcounter, questões numeradas)
 6. [ ] Ambientes com parâmetros (exemplo, anotações de autores, diálogos)
-7. [ ] Erros comuns
+7. [ ] Atenção
 8. [ ] Tarefa e Desafio
 
 
@@ -112,7 +113,7 @@ Os dois primeiros módulos são liberados na primeira semana.
 2. [ ] estilos de capítulo (chapterstyle) e estilo de página
 3. [ ] cabeçalho e rodapé (page, lastpage)
 4. [ ] margens do documento (setlrmargins, setulmargins, checkandfixthelayout)
-5. [ ] Erros comuns
+5. [ ] Atenção
 6. [ ] Tarefa e Desafio
 
 
@@ -130,14 +131,14 @@ Os dois primeiros módulos são liberados na primeira semana.
 11. [ ] operações com conjuntos (in, notin, subset, subseteq, supset, supseteq)
 12. [ ] equações numeradas (equation, align)
 13. [ ] overbrace e underbrace
-14. [ ] Erros comuns
+14. [ ] Atenção
 15. [ ] Tarefa e Desafio
 
 ## Módulo 8 &mdash; Bibliografia
 1. [ ] Bibliografia no muque (thebibliography, bibitem)
 2. [ ] BibTeX (resultado, fluxo de trabalho) # exemplo com artigos
 3. [ ] BibTeX outros tipos de entradas, plain vs alpha
-4. [ ] Erros comuns
+4. [ ] Atenção
 5. [ ] Tarefa e Desafio
 
 ## Outros assuntos
