@@ -39,26 +39,34 @@ Os dois primeiros módulos são liberados na primeira semana.
 4. [x] [história e contexto (Knuth, por que o LaTeX é de graça)](https://youtu.be/FEz0qYls9SI?list=PLUOUidAXN8Ob28rdtr0awBEHv3lvCtKGp)
 5. [x] [programas necessários e instalação (latex + editores de texto)](https://youtu.be/TRnagZ39fJk)
 
+### Tarefa e Desafio
+
+- Instalar LaTeX no computador
+- Apresentar-se no fórum
+- Tirar as dúvidas que tiver!
+
 ## Módulo 1 &mdash; Arroz com feijão
 1. [x] [texto puro! (marcação semântica, qual é a diferença?)](https://youtu.be/buBmazofm3s)
 2. [x] [produzindo um documento (texmaker, partes do documento, compilação)](https://youtu.be/ZEEpMzfLF1c)
-3. [ ] os programas que vamos usar no curso (texmaker, pdflatex, bibtex) 
-4. [ ] os arquivos produzidos (e pra quê servem)
- falar que mais de uma etapa de compilação pode ser necessária
-5. [ ] onde buscar ajuda? (lshort, wikibooks, comunidade,
+3. [x] [Partes do documento e sintaxe (cabeçalho e corpo do texto, comandos e agrupamento)](https://youtu.be/Qx9m99qyrR0)
+4. [ ] Comandos, parâmetros (argumentos) e pacotes
+4. [ ] onde buscar ajuda? (lshort, wikibooks, comunidade,
  tex.stackexchange, OSQA para o MOOC?)
-6. [ ] Erros comuns (confundir editor e compilador) 
-7. [ ] Tarefa e Desafio
+5. [ ] Erros comuns (confundir editor e compilador) 
+
+### Tarefa e Desafio
+
+
 
 ## Módulo 2 &mdash; Escrevendo texto
-1. [ ] Sintaxe (texto versus comandos, cabeçalho do documento,
- pacotes, parâmetros)
-2. [ ] Pontuação, espaços (comando espaço e espaços inquebráveis),
+1. [ ] Pontuação, espaços (comando espaço e espaços inquebráveis),
  apóstrofo, traços (-, --,---). 
-3. [ ] Caracteres especiais
-4. [ ] Quebra de linha, novo parágrafo e nova página, (par, newline,
+2. [ ] Caracteres especiais
+3. [ ] Quebra de linha, novo parágrafo e nova página, (par, newline,
  noindent, newpage).
-5. [ ] Hifenação
+4. [ ] Hifenação
+5. [ ] os arquivos produzidos (e pra quê servem)
+ falar que mais de uma etapa de compilação pode ser necessária
 6. [ ] Erros comuns
 7. [ ] Tarefa e Desafio
 
