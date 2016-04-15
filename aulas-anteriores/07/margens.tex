@@ -1,0 +1,55 @@
+% Projeto aula 7: Margens e espaçamentos.
+
+% Cabeçalho para artigo 
+
+\documentclass[12pt,article,a4paper,oneside]{memoir}
+\settypeblocksize{23cm}{15cm}{*}
+\setlrmargins{*}{*}{3}
+\setulmargins{*}{*}{1}
+
+% Remover espaço para cabeçalho
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+
+
+\checkandfixthelayout
+
+% Escrevendo em português e utf8
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+\begin{document}
+
+\vspace*{\fill}
+\begin{center}
+{\Huge A invenção de Hugo Cabret}
+
+\vspace*{\fill}
+
+{\Large Brian Selznick}
+\end{center}
+
+\vspace*{\fill}
+
+
+\title{\Huge Breve Introdução}
+\date{}
+\author{}
+\maketitle 
+
+\Large A história que estou prestes a contar se passa em 1931, sob os telhados de Paris. Aqui, você conhecerá um menino chamado Hugo Cabret, que, certa vez, muito tempo atrás, descobriu um misterioso desenho que mudou sua vida para sempre.
+
+\smallskip
+
+Mas antes de virar a página, quero que você se imagine sentado no escuro, como no início de um filme. Na tela o sol logo vai nascer, e você será levado em \emph{zoom} até uma estação de trem no meio da cidade. Atravessará correndo as portas de um saguão lotado. Vai avistar um menino no meio da multidão e ele começará a se mover pela estação. Siga-o, porque este é Hugo Cabret. Está cheio de segredos na cabeça, esperando que sua história comece.
+
+\vspace{\fill}
+
+\begin{flushright}
+Professor H. Alcofrisbras
+\end{flushright}
+
+
+
+\end{document}
