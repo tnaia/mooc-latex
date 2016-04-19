@@ -1,0 +1,15 @@
+
+       .= .-_-. =.    	
+      ((_/)o o(\_))       .─┐                         ╦
+       `-'(. .)`-'      ╦ ├─┤╔╦═══╗ ╦   ╔╦╗╔═╗╔═╗╔═╗  ║ 
+        /| \_/ |\       ║ ┴ ┴ ║┌─┐╚╦╝  	║║║║ ║║ ║║    ║
+       ( | GNU | )      ╩═╝   ╩├┤ ╔╩╗  	╩ ╩╚═╝╚═╝╚═╝  o  
+       /"\_____/"\             └─┘╝ ╚
+       \__)   (__/      
+  >> GNU é Liberdade! <<      Vídeo-aula            m-1 v-4
+			      				    
+Imagem de Martin Dickopp      - Comandos
+      Copyright 2004          - parâmetros (argumentos)
+                                - obrigatórios
+			        - opcionais
+                              

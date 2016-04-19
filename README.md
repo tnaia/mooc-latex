@@ -49,7 +49,7 @@ Os dois primeiros módulos são liberados na primeira semana.
 1. [x] [texto puro! (marcação semântica, qual é a diferença?)](https://youtu.be/buBmazofm3s)
 2. [x] [produzindo um documento (texmaker, partes do documento, compilação)](https://youtu.be/ZEEpMzfLF1c)
 3. [x] [Partes do documento e sintaxe (cabeçalho e corpo do texto, comandos e agrupamento)](https://youtu.be/Qx9m99qyrR0)
-4. [ ] Comandos, parâmetros (argumentos)
+4. [x] [Comandos, parâmetros (argumentos)](https://youtu.be/KnZgLeStvBo)
 5. [ ] Incluindo Pacotes
 6. [ ] onde buscar ajuda? (lshort, wikibooks, comunidade,
  tex.stackexchange, OSQA para o MOOC?)
